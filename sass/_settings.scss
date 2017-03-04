@@ -1,7 +1,15 @@
+@import '//fonts.googleapis.com/css?family=Anton|Open+Sans';
+
+// Fonts
+$anton: 'Anton', sans-serif;
+$opensans: 'Open Sans', sans-serif;
+
+// Layout
 $container: 1200px;
  
 // Colours
 $white: #ffffff;
+$light: lighten($white, 50%);
 $primary: #1b75bc;
 
 //Breakpoints

@@ -7,7 +7,9 @@ export default (self) => {
       <Helmet
         title="Just Meet"
       />
-      <p>Homepage</p>
+      <div className="container">
+        <p>Homepage</p>
+      </div>
     </div>
   );
 };
