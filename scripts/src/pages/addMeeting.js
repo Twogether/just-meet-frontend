@@ -1,18 +1,19 @@
 import ReactDOM from 'react-dom';
 import React from 'react';
 
-class NotFound extends React.Component {
+class Actions extends React.Component {
 
   constructor(props) {
     super(props);
+    this.props = props;
     this.state = {};
   }
 
   render(){
-    return(
-      <p>404</p>
+    return (
+        <div></div>
     );
   }
 };
 
-export default NotFound;
+export default Actions;

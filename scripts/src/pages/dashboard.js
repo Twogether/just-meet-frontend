@@ -1,17 +1,18 @@
 import ReactDOM from 'react-dom';
 import React from 'react';
-import view from './views/homepage';
-import socket from '../utils/socket';
-socket.on(`server:event`, data => {
-  this.setState({ data })
-});
+import view from './views/dashboard';
+import Api from '../utils/api';
 
-
-class Homepage extends React.Component {
+class Dashboard extends React.Component {
 
   constructor(props) {
     super(props);
     this.state = {};
+    this.getData();
+  }
+
+  async getData() {
+    const meetings = await Api.getMeetings();
   }
 
   componentWillReceiveProps(newProps) {
@@ -19,6 +20,7 @@ class Homepage extends React.Component {
   }
 
   componentWillMount() {
+    
   }
 
   render(){
@@ -27,4 +29,4 @@ class Homepage extends React.Component {
 
 };
 
-export default Homepage;
+export default Dashboard;

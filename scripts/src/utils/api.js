@@ -1,7 +1,13 @@
+import axios from 'axios';
+
 class Api {
 
-  static async getMeetings() {
+  static get base() {
+    return 'http://localhost:3001'
+  }
 
+  static async getMeetings() {
+    return await axios.get(`${Api.base}/meetings`);
   }
 
 };
