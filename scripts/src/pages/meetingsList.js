@@ -2,7 +2,7 @@ import ReactDOM from 'react-dom';
 import React from 'react';
 import Api from '../utils/api';
 
-class Actions extends React.Component {
+class MeetingsList extends React.Component {
 
   constructor(props) {
     super(props);
@@ -27,4 +27,4 @@ class Actions extends React.Component {
   }
 };
 
-export default Actions;
+export default MeetingsList;
