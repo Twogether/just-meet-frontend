@@ -33,7 +33,7 @@ class Base extends React.Component {
         <div>
           {header(this)}
           <div className="react-transition-wrapper">
-            <RouteTransition pathname={this.props.location.pathname} atEnter={{ opacity: 0, display: 'none' }} atLeave={{ opacity: 0 }} atActive={{ opacity: 1 }}>
+            <RouteTransition pathname={this.props.location.pathname} atEnter={{ opacity: 0 }} atLeave={{ opacity: 0 }} atActive={{ opacity: 1 }}>
               <div className="react-transition-container">
                 <main>{this.props.children}</main>
               </div>
