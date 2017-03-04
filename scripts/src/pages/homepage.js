@@ -1,6 +1,11 @@
 import ReactDOM from 'react-dom';
 import React from 'react';
 import view from './views/homepage';
+import socket from '../utils/socket';
+socket.on(`server:event`, data => {
+  this.setState({ data })
+});
+
 
 class Homepage extends React.Component {
 

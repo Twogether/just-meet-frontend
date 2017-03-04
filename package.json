@@ -9,7 +9,8 @@
     "body-parser": "^1.16.1",
     "cookie-parser": "^1.4.3",
     "ejs": "^2.5.5",
-    "express": "^4.14.1"
+    "express": "^4.14.1",
+    "socket.io": "^1.7.3"
   },
   "devDependencies": {
     "babel": "^6.23.0",
