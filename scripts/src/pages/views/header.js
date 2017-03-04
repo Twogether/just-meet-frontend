@@ -18,12 +18,20 @@ export default (self) => {
                 </small>
             </div>
 
-            <div className="right third text-right" onClick={self.toggleAccountDropdown.bind(self)}>
-                Account
-                <div className={self.state.accountDropdownOpen ? 'is-open' : 'is-hidden'}>
-                  dropdown
-                  <Gravatar email="simon.staton@live.co.uk" />
-                </div>
+            <div className="right third text-right">
+                <ul className="account-dropdown">
+                    <li onClick={self.toggleAccountDropdown.bind(self)}>
+                        Account
+                        <div className="profile-circle">
+                            <Gravatar email="tomc@designyourcode.io" />
+                        </div>
+
+                        <ul className={self.state.accountDropdownOpen ? 'is-open' : 'is-hidden'}>
+                            <li><Link to="/preferences"><i className="fa fa-cogs" aria-hidden="true"></i> Preferences</Link></li>
+                            <li><Link to="/logout"><i className="fa fa-sign-out" aria-hidden="true"></i> Log out</Link></li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
         </div>
     </header>

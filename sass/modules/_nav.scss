@@ -4,6 +4,24 @@
     width: 100%;
 }
 
+.top-nav {
+    @extend .menu-row;
+    border-bottom: 1px solid $primary;
+    margin-bottom: 30px;
+
+    a {
+        background: transparent;
+        color: $primary;
+        display: inline-block;
+        padding: 10px 20px;
+        @include transition(all .3s ease-in-out);
+
+        &:hover {
+            background: $lightgrey;
+        }
+    }
+}
+
 // Side nav
 .side-nav {
     a {
