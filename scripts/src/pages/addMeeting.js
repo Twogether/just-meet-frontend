@@ -67,6 +67,9 @@ class AddMeeting extends React.Component {
   }
 
   updateAttendees(attendee) {
+    this.refs['form-field-5'].getInstance().setState({
+      value: null // Reset value
+    });
     attendee.remove = (e) => {
       e.preventDefault();
       this.removeAttendees(attendee);
