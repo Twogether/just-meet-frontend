@@ -67,6 +67,7 @@ class AddMeeting extends React.Component {
   }
 
   updateAttendees(attendee) {
+    console.log(this.refs['form-field-5']);
     attendee.remove = (e) => {
       e.preventDefault();
       this.removeAttendees(attendee);

@@ -1,34 +1,45 @@
 /** The option list should not be visible by default */
 .select-search-box__select {
     display: none;
+    position: relative;
 }
 
-    /** If it's a multiple select, you can style it with this selector */
-    .select-search-box--multiple .select-search-box__select {
-        display: block;
-    }
+/** If it's a multiple select, you can style it with this selector */
+.select-search-box--multiple .select-search-box__select {
+    display: block;
+}
 
-    /** The list receives the modifier class "display" when the select has focus */
-    .select-search-box__select--display {
-        display: block;
-    }
+/** The list receives the modifier class "display" when the select has focus */
+.select-search-box__select--display {
+    display: block;
+}
 
 /** UL with the options */
 .select-search-box__options {
-
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    background: #fff;
 }
 
 /** The option (LI), look at the state classes below */
 .select-search-box__option {
+    cursor: pointer;
+    padding: 10px;
+    border-bottom: 1px solid #CDCDCD;
+    &:hover {
+        background: #000;
+        color: #fff;
+    }
+}
+
+/** When the option has been selected */
+.select-search-box__option--selected {
 
 }
 
-    /** When the option has been selected */
-    .select-search-box__option--selected {
+/** When the option is selected (when navigation with the arrow keys, up/down) */
+.select-search-box__option--hover, .select-search-box__option:hover {
 
-    }
-
-    /** When the option is selected (when navigation with the arrow keys, up/down) */
-    .select-search-box__option--hover, .select-search-box__option:hover {
-
-    }
+}

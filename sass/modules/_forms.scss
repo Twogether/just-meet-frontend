@@ -11,3 +11,21 @@ form {
         @include appearance(none);
     }
 }
+
+.input-wrapper {
+    position: relative;
+    .error {
+        border: 1px solid red;
+    }
+    .error-msg {
+        position: absolute;
+        display: block;
+        bottom: 13px;
+        right: 0;
+        background: red;
+        padding: 7px;
+        color: #fff;
+        font-size: 13px;
+        line-height: 1;
+    }
+}
