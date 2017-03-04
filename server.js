@@ -10,6 +10,9 @@ const app = express();
 
 // litle hacky for now - but if the Papertrail API exists, then we 
 // must be on heroku - so set the port differently
+
+const port = 80;
+
 if(process.env.PAPERTRAIL_API_TOKEN) { 
     const port = 80;
 }
