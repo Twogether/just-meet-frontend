@@ -1,7 +1,22 @@
 {
   "meetings": [
     {
-      "id": "123"
+      "id": "1",
+      "title": "First Meeting",
+      "date": "2017-03-05T14:00:00.269Z",
+      "attendees": ["uid1", "uid2", "uid3"]
+    },
+    {
+      "id": "2",
+      "title": "Second Meeting",
+      "date": "2017-03-12T09:00:00.269Z",
+      "attendees": ["uid1", "uid3"]
+    },
+    {
+      "id": "3",
+      "title": "Third Meeting",
+      "date": "2017-04-04T16:00:00.269Z",
+      "attendees": ["uid1", "uid2"]
     }
   ]
 }
