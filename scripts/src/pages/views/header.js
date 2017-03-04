@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
+import Moment from 'react-moment';
 
 export default (self) => {
   return (
@@ -10,9 +11,9 @@ export default (self) => {
             </div>
 
             <div className="left third text-center">
-                <strong className="uppercase">09:07</strong><br />
+                <strong className="uppercase"><Moment format="HH:mm:ss">{self.state.now}</Moment></strong><br />
                 <small className="light">
-                    <strong>Friday 3rd March 2017</strong>
+                    <strong><Moment format="MMMM Do YYYY">{self.state.now}</Moment></strong>
                 </small>
             </div>
 
