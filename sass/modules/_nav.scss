@@ -1,10 +1,21 @@
 .box-nav {
-    margin: 0 auto;
-    max-width: 800px;
+    // text-align: center;
+    width: 100%;
+
+    h2 {
+        @extend strong;
+        display: inline-block;
+        margin-bottom: 30px;
+
+        a {
+            color: $white;
+            font-size: 22px;
+            text-decoration: none;
+        }
+    }
 
     &-link {
         border-right: 1px solid $light;
-        border-bottom: 1px solid $light;
         color: $white;
         float: left;
         padding: 40px;
@@ -13,16 +24,13 @@
         width: 33%;
         @include transition(all .3s ease-in-out);
 
-        &:nth-child(3), &:nth-child(6) {
+        &:last-child {
             border-right: none;
-        }
-
-        &:nth-child(4), &:nth-child(5), &:nth-child(6) {
-            border-bottom: none;
         }
 
         &:hover {
             background: $white;
+            box-shadow: 0 0 20px -2px rgba(0,0,0,0.5);
             color: $primary;
         }
     }

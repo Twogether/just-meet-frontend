@@ -2,25 +2,57 @@
   "meetings": [
     {
       "id": "1",
-      "title": "First Meeting",
-      "date": "2017-03-05T14:00:00.269Z",
+      "name": "First Meeting",
+      "starttime": "2017-03-05T14:00:00.269Z",
+      "starttime": "2017-03-05T15:00:00.269Z",
       "attendees": ["uid1", "uid2", "uid3"]
     },
     {
       "id": "2",
-      "title": "Second Meeting",
-      "date": "2017-03-12T09:00:00.269Z",
+      "name": "Second Meeting",
+      "starttime": "2017-03-12T09:00:00.269Z",
+      "starttime": "2017-03-12T11:00:00.269Z",
       "attendees": ["uid1", "uid3"]
     },
     {
       "id": "3",
-      "title": "Third Meeting",
-      "date": "2017-04-04T16:00:00.269Z",
+      "name": "Third Meeting",
+      "starttime": "2017-04-04T16:00:00.269Z",
+      "starttime": "2017-04-04T16:30:00.269Z",
       "attendees": ["uid1", "uid2"]
     }
   ],
-  "actions": {},
+  "actions": [
+    {
+      "id": "1",
+      "meeting_id": "1",
+      "topic": "Test Topic",
+      "description": "Test description"
+    }
+  ],
+  "action_user": [
+    {
+      "user_id": "1",
+      "action_id": "1"
+    }
+  ],
+  "agenda": {
+    "id": "1",
+    "meeting_id": "1",
+    "topic": "test topic",
+    "description": "test description"
+  },
   "rooms": {},
-  "meetings": {},
-  "calendar": {}
+  "calendar": {},
+  "user": {
+    "id": "1",
+    "first_name": "Simon",
+    "second_name": "Staton",
+    "email": "simon.staton@wearetwogether.com"
+  },
+  "attendee": {
+    "user_id": "1",
+    "meeting_id": "1",
+    "user_id": "1"
+  }
 }

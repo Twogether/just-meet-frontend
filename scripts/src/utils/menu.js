@@ -1,22 +1,24 @@
 export default [
     {
         text: 'Meetings',
-        path: '/meetings'
+        path: '/meetings',
+        children: [
+            {
+                text: 'Add Meeting',
+                path: '/meetings/add'
+            },
+            {
+                text: 'Edit Meeting',
+                path: '/meetings/edit'
+            },
+            {
+                text: 'Join Meeting',
+                path: '/meetings/join'
+            }
+        ]
     },
     {
-        text: 'Add Meeting',
-        path: '/meetings/add'
-    },
-    {
-        text: 'Edit Meeting',
-        path: '/meetings/edit'
-    },
-    {
-        text: 'Join Meeting',
-        path: '/meetings/join'
-    },
-    {
-        text: 'Actions',
+        text: 'My Actions',
         path: '/actions'
     },
     {

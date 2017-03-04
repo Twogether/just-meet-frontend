@@ -1,0 +1,24 @@
+{
+  "name": "just-meet-frontend",
+  "scripts": {
+  },
+  "env": {
+    "PAPERTRAIL_API_TOKEN": {
+      "required": true
+    },
+    "HEROKU_APP": {
+      "description": "The number of processes to run.",
+      "value": "true"
+    }
+  },
+  "formation": {
+  },
+  "addons": [
+    "papertrail"
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ]
+}

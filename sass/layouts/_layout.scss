@@ -2,11 +2,31 @@ main {
     margin: 40px 0;
 }
 
-.container {
+%container {
     @include cf();
     margin: 0 auto;
 	max-width: $container;
     width: 96%;
+}
+
+.container {
+    @extend %container;
+
+    &-narrow {
+        @extend %container;
+        max-width: $container - 400;
+    }
+}
+
+// Move this somewhere @Tom
+.react-transition-wrapper {
+    @extend .container;
+    position: relative;
+    
+    .react-transition-container {
+        position: absolute;
+        width: 100%;
+    }
 }
 
 .left {

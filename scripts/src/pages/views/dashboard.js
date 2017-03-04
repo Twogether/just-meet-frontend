@@ -4,17 +4,26 @@ import { Link } from 'react-router';
 
 export default (self) => {
   return (
-    <main>
+    <div>
       <Helmet
-        title="Just Meet"
+        title="Just Meet | Overview"
       />
-      <div className="container">
-        <nav className="box-nav">
+      <div className="container-narrow">
+        <div className="box-nav">
             {self.state.menu.map((link, index) => {
-                return <Link key={index} className="box-nav-link" to={link.path}>{link.text}</Link>
+                return (
+                    <div className="row">
+                        <h2><Link key={index} to={link.path}>{link.text}</Link></h2>
+                        <div className="row">
+                            {link.children && link.children.map((link, index) => {
+                                return <Link key={`child-${index}`} className="box-nav-link" to={link.path}>{link.text}</Link>
+                            })}
+                        </div>
+                    </div>
+                );
             })}
-        </nav>
+        </div>
       </div>
-    </main>
+    </div>
   );
 };
