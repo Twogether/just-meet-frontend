@@ -1,9 +1,9 @@
 import ReactDOM from 'react-dom';
 import React from 'react';
-import view from './views/homepage';
+import view from './views/dashboard';
 import Api from '../utils/api';
 
-class Homepage extends React.Component {
+class Dashboard extends React.Component {
 
   constructor(props) {
     super(props);
@@ -21,6 +21,7 @@ class Homepage extends React.Component {
   }
 
   componentWillMount() {
+    
   }
 
   render(){
@@ -29,4 +30,4 @@ class Homepage extends React.Component {
 
 };
 
-export default Homepage;
+export default Dashboard;

@@ -1,7 +1,7 @@
 import ReactDOM from 'react-dom';
 import React from 'react';
 
-class Notfound extends React.Component {
+class NotFound extends React.Component {
 
   constructor(props) {
     super(props);
@@ -15,4 +15,4 @@ class Notfound extends React.Component {
   }
 };
 
-export default Notfound;
+export default NotFound;
