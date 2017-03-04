@@ -10,14 +10,18 @@ class Loader extends React.Component {
     this.state = {
       loading: true
     };
+  }
 
-    emitter.on('loading', loading => {
-      this.setState({loading});
-    });
+  componentDidMount() {
+    emitter.on('loading', this.onLoading.bind(this));
+  }
+
+  onLoading(loading) {
+    this.setState({loading});
   }
 
   render(){
-    return !this.state.loading ? null : (
+    return !this.state.loading ? <div /> : (
       <div className="loader">Page is Loading</div>
     );
   }

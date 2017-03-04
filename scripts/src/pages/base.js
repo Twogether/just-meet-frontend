@@ -14,7 +14,6 @@ class Base extends React.Component {
     this.state = {
       accountDropdownOpen: false
     };
-    this.interval = setInterval(this.incrementHeaderTimer.bind(this), 1000);
   }
 
   componentWillUnmount() {
@@ -27,7 +26,12 @@ class Base extends React.Component {
     });
   }
 
+  componentWillUnmount() {
+    clearInterval(this.interval);
+  }
+
   componentDidMount() {
+    this.interval = setInterval(this.incrementHeaderTimer.bind(this), 1000);
     setTimeout(() => {
       emitter.emit('loading', false);
     }, 1000); // Slow down initial load so it looks nice
