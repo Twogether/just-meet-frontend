@@ -1,7 +1,13 @@
+import { browserHistory } from 'react-router';
+
 const Authentication = {
 
+  user: null,
+
   authorise: () => {
-    return !!Authentication.user;
+    let saved = localStorage.getItem('user');
+    if (saved) saved = JSON.parse(saved);
+    return saved || !!Authentication.user;
   },
 
   unauthorise: () => {
@@ -9,12 +15,17 @@ const Authentication = {
   },
 
   setUser: (user) => {
+    localStorage.setItem('user', JSON.stringify(user));
     Authentication.user = user;
     return Authentication.user;
   },
 
   logout: () => {
+    localStorage.removeItem('user');
     delete Authentication.user;
+    browserHistory.push({
+      pathname: '/login'
+    });
   }
 
 };
