@@ -8,7 +8,10 @@ class Dashboard extends React.Component {
 
   constructor(props) {
     super(props);
-    this.state = {menu};
+    this.state = {
+        menu: menu,
+        meetings: []
+    };
     this.getData();
   }
 
@@ -21,7 +24,6 @@ class Dashboard extends React.Component {
   }
 
   componentWillMount() {
-    
   }
 
   render(){

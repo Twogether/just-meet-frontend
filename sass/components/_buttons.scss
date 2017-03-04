@@ -27,4 +27,20 @@
         font-size: inherit;
         text-transform: none;
     }
+
+    &-inline-dark {
+        @extend %btn;
+        background: $primary;
+        border: 0;
+        border-radius: 0;
+        color: $white !important;
+        font-family: $opensans;
+        font-size: inherit;
+        text-transform: none;
+
+        &:hover {
+            background: $light;
+            color: $primary !important;
+        }
+    }
 }

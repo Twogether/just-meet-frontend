@@ -7,15 +7,28 @@ body {
     color: $white;
     font-family: $opensans;
     font-size: 18px;
+
+    &.home {
+        background: $white;
+        color: $darkgrey;
+    }
 }
 
 h1, h2, h3, h4, h5, h6 {
     margin-top: 0;
 }
 
-.logo {
+img {
     height: auto;
-    max-width: 125px;
+    max-width: 100%;
+}
+
+.logo {
+    color: $white;
+    font-family: $opensans;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 600;
 }
 
 ul {

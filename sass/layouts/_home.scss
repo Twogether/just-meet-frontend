@@ -1,0 +1,31 @@
+// Home
+.hero {
+    background: url('../img/meeting.jpg') no-repeat scroll center center $light;
+    overflow: hidden;
+    text-align: center;
+    padding: 20% 0;
+
+    .logo {
+        font-size: 66px;
+        text-shadow: 0 0 10px $black;
+    }
+}
+
+// Nav
+.nav-bar {
+    border-bottom: 1px solid $darkgrey;
+    display: inline-block;
+    width: 100%;
+
+    a {
+        display: inline-block;
+        color: $darkgrey;
+        padding: 14px 20px;
+        text-decoration: none;
+        @include transition(all .3s ease-in-out);
+
+        &:hover {
+            background: $lightgrey;
+        }
+    }
+}

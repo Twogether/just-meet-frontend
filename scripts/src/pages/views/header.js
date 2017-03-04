@@ -8,7 +8,7 @@ export default (self) => {
     <header className="header">
         <div className="container border-bottom">
             <div className="left third text-left">
-                <Link to="/"><img className="left logo" src="img/logo.png" /></Link>
+                <span className="logo">Just Meet</span>
             </div>
 
             <div className="left third text-center">
