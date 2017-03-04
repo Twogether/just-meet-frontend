@@ -14,9 +14,9 @@ class Rooms extends React.Component {
   }
 
   async getData() {
-    this.setState({
-      rooms: (await Api.getRooms()).data
-    });
+    // this.setState({
+    //   rooms: (await Api.getRooms()).data
+    // });
   }
 
   render(){

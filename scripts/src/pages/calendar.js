@@ -14,9 +14,9 @@ class Calendar extends React.Component {
   }
 
   async getData() {
-    this.setState({
-      calendar: (await Api.getCalendar()).data
-    });
+    // this.setState({
+    //   calendar: (await Api.getCalendar()).data
+    // });
   }
 
   render(){
