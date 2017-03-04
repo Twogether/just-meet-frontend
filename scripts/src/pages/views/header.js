@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router';
 import Moment from 'react-moment';
+import Gravatar from 'react-gravatar';
 
 export default (self) => {
   return (
@@ -17,8 +18,12 @@ export default (self) => {
                 </small>
             </div>
 
-            <div className="right third text-right">
+            <div className="right third text-right" onClick={self.toggleAccountDropdown.bind(self)}>
                 Account
+                <div className={self.state.accountDropdownOpen ? 'is-open' : 'is-hidden'}>
+                  dropdown
+                  <Gravatar email="simon.staton@live.co.uk" />
+                </div>
             </div>
         </div>
     </header>
