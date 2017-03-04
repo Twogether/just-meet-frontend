@@ -10,7 +10,6 @@ const app = express();
 
 var port = process.env.PORT || 8081; // Use the port that Heroku 
 
-
 app.use(express.static(path.join(__dirname, 'public')));
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
