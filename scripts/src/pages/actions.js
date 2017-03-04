@@ -20,9 +20,9 @@ class Actions extends React.Component {
   }
 
   render(){
-    console.log(this.state.actions);
+    console.log('actions response', this.state.actions);
     return (
-        <div></div>
+        <div>Actions</div>
     );
   }
 };

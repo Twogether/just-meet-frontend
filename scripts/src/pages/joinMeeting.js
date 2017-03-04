@@ -11,7 +11,7 @@ class JoinMeeting extends React.Component {
 
   render(){
     return (
-        <div></div>
+        <div>Join Meeting</div>
     );
   }
 };

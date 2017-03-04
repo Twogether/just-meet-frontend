@@ -20,9 +20,9 @@ class Calendar extends React.Component {
   }
 
   render(){
-    console.log(this.state.calendar);
+    console.log('calendars response', this.state.calendar);
     return (
-        <div></div>
+        <div>Calendar</div>
     );
   }
 };

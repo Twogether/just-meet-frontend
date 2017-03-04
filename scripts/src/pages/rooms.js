@@ -20,9 +20,9 @@ class Rooms extends React.Component {
   }
 
   render(){
-    console.log(this.state.rooms);
+    console.log('rooms response', this.state.rooms);
     return (
-        <div></div>
+        <div>Rooms</div>
     );
   }
 };

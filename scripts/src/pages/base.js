@@ -10,9 +10,41 @@ class Base extends React.Component {
     this.state = {};
   }
 
-
   componentWillReceiveProps(newProps) {
     this.props = newProps;
+  }
+
+  get links() {
+    return [
+      {
+        text: 'Meetings',
+        path: '/meetings'
+      },
+      {
+        text: 'Add Meeting',
+        path: '/meetings/add'
+      },
+      {
+        text: 'Edit Meeting',
+        path: '/meetings/edit'
+      },
+      {
+        text: 'Join Meeting',
+        path: '/meetings/join'
+      },
+      {
+        text: 'Actions',
+        path: '/actions'
+      },
+      {
+        text: 'Rooms',
+        path: '/rooms'
+      },
+      {
+        text: 'Calendar',
+        path: '/calendar'
+      }
+    ];
   }
 
   render(){

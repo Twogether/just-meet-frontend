@@ -11,7 +11,7 @@ class EditMeeting extends React.Component {
 
   render(){
     return (
-        <div></div>
+        <div>Edit Meeting</div>
     );
   }
 };

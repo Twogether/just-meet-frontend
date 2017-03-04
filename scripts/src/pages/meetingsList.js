@@ -20,9 +20,9 @@ class MeetingsList extends React.Component {
   }
 
   render(){
-    console.log(this.state.meetings);
+    console.log('meetings response', this.state.meetings);
     return (
-        <div></div>
+        <div>Meetings List</div>
     );
   }
 };
