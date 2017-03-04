@@ -1,5 +1,6 @@
 import ReactDOM from 'react-dom';
 import React from 'react';
+import header from './views/header';
 
 class Base extends React.Component {
 
@@ -17,6 +18,7 @@ class Base extends React.Component {
   render(){
     return (
         <div>
+          {header(this)}
           {this.props.children}
         </div>
     );
