@@ -2,6 +2,8 @@ import ReactDOM from 'react-dom';
 import React from 'react';
 import view from './views/login';
 import api from '../utils/api';
+import Authentication from '../utils/authentication';
+import { browserHistory } from 'react-router';
 
 class Home extends React.Component {
 
@@ -41,7 +43,10 @@ class Home extends React.Component {
     api.getUsers().then(res => {
       const user = res.data.filter(user =>  user.email == data.email)[0];
       if (user) {
-        console.log("user found", user);
+        Authentication.setUser(user);
+        browserHistory.push({
+          pathname: '/dashboard'
+        });
       } else {
         alert("invalid email");
       }
