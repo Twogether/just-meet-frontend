@@ -42,6 +42,7 @@
     "vinyl-source-stream": "~1.1"
   },
   "scripts": {
-    "start": "./node_modules/babel-cli/bin/babel-node.js -- server.js --no-warnings"
+    "start": "./node_modules/babel-cli/bin/babel-node.js -- server.js --no-warnings",
+    "json": "./node_modules/json-server/bin/index.js --watch ./json/db.json --port 3001"
   }
 }
