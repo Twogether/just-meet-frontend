@@ -1,6 +1,7 @@
 import ReactDOM from 'react-dom';
 import React from 'react';
 import header from './views/header';
+import menu from '../utils/menu';
 import Loader from '../utils/loader';
 import emitter from '../utils/eventEmitter';
 import { RouteTransition } from 'react-router-transition';
@@ -24,36 +25,7 @@ class Base extends React.Component {
   }
 
   get links() {
-    return [
-      {
-        text: 'Meetings',
-        path: '/meetings'
-      },
-      {
-        text: 'Add Meeting',
-        path: '/meetings/add'
-      },
-      {
-        text: 'Edit Meeting',
-        path: '/meetings/edit'
-      },
-      {
-        text: 'Join Meeting',
-        path: '/meetings/join'
-      },
-      {
-        text: 'Actions',
-        path: '/actions'
-      },
-      {
-        text: 'Rooms',
-        path: '/rooms'
-      },
-      {
-        text: 'Calendar',
-        path: '/calendar'
-      }
-    ];
+    return menu;
   }
 
   render(){
@@ -63,7 +35,7 @@ class Base extends React.Component {
           <div className="react-transition-wrapper">
             <RouteTransition pathname={this.props.location.pathname} atEnter={{ opacity: 0, display: 'none' }} atLeave={{ opacity: 0 }} atActive={{ opacity: 1 }}>
               <div className="react-transition-container">
-                {this.props.children}
+                <main>{this.props.children}</main>
               </div>
             </RouteTransition>
           </div>

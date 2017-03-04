@@ -1,0 +1,37 @@
+.box-nav {
+    // text-align: center;
+    width: 100%;
+
+    h2 {
+        @extend strong;
+        display: inline-block;
+        margin-bottom: 30px;
+
+        a {
+            color: $white;
+            font-size: 22px;
+            text-decoration: none;
+        }
+    }
+
+    &-link {
+        border-right: 1px solid $light;
+        color: $white;
+        float: left;
+        padding: 40px;
+        text-align: center;
+        text-decoration: none;
+        width: 33%;
+        @include transition(all .3s ease-in-out);
+
+        &:last-child {
+            border-right: none;
+        }
+
+        &:hover {
+            background: $white;
+            box-shadow: 0 0 20px -2px rgba(0,0,0,0.5);
+            color: $primary;
+        }
+    }
+}

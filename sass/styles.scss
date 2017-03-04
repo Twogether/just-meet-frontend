@@ -1,16 +1,10 @@
-@charset "UTF-8";
+@import 'bourbon/bourbon';
+
 @import 'reset';
+@import 'mixin';
 @import 'settings';
 @import 'global';
 
 @import 'layouts/*';
 @import 'modules/*';
 @import 'components/*';
-
-// Move this somewhere @Tom
-.react-transition-wrapper {
-	position: relative;
-	.react-transition-container {
-		position: absolute;
-	}
-}

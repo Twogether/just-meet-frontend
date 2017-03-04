@@ -1,4 +1,48 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     background: $primary;
     color: $white;
+    font-family: $opensans;
+    font-size: 18px;
+}
+
+.logo {
+    height: auto;
+    max-width: 125px;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.light {
+    color: $light;
+}
+
+strong {
+    font-family: $anton;
+}
+
+small {
+    font-size: 14px;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+// Borders
+.border-bottom {
+    border-bottom: 1px solid $white;
 }
