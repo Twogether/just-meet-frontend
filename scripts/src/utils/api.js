@@ -1,17 +1,13 @@
+import axios from 'axios';
+
 class Api {
 
+  static get base() {
+    return 'http://localhost:3001'
+  }
 
-  // Setup endpoints for
-  // 
-  // Creating meetings
-  // Adding atendees
-  // Updating meeting
-  // Adding notes
-  // Setting agenda
-  // 
-  // Make modify meetings method generic
   static async getMeetings() {
-
+    return await axios.get(`${Api.base}/meetings`);
   }
 
 };
