@@ -1,7 +1,7 @@
 import ReactDOM from 'react-dom';
 import React from 'react';
 
-class Actions extends React.Component {
+class AddMeeting extends React.Component {
 
   constructor(props) {
     super(props);
@@ -11,9 +11,9 @@ class Actions extends React.Component {
 
   render(){
     return (
-        <div></div>
+        <div>Add Meeting</div>
     );
   }
 };
 
-export default Actions;
+export default AddMeeting;

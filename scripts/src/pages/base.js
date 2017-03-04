@@ -1,6 +1,7 @@
 import ReactDOM from 'react-dom';
 import React from 'react';
 import header from './views/header';
+import menu from '../utils/menu';
 
 class Base extends React.Component {
 
@@ -10,9 +11,12 @@ class Base extends React.Component {
     this.state = {};
   }
 
-
   componentWillReceiveProps(newProps) {
     this.props = newProps;
+  }
+
+  get links() {
+    return menu;
   }
 
   render(){

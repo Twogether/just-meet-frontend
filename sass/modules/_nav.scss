@@ -1,0 +1,29 @@
+.box-nav {
+    margin: 0 auto;
+    max-width: 800px;
+
+    &-link {
+        border-right: 1px solid $light;
+        border-bottom: 1px solid $light;
+        color: $white;
+        float: left;
+        padding: 40px;
+        text-align: center;
+        text-decoration: none;
+        width: 33%;
+        @include transition(all .3s ease-in-out);
+
+        &:nth-child(3), &:nth-child(6) {
+            border-right: none;
+        }
+
+        &:nth-child(4), &:nth-child(5), &:nth-child(6) {
+            border-bottom: none;
+        }
+
+        &:hover {
+            background: $white;
+            color: $primary;
+        }
+    }
+}

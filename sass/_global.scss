@@ -1,7 +1,12 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     background: $primary;
     color: $white;
     font-family: $opensans;
+    font-size: 18px;
 }
 
 .logo {
@@ -21,6 +26,10 @@ strong {
     font-family: $anton;
 }
 
+small {
+    font-size: 14px;
+}
+
 .text-left {
     text-align: left;
 }
@@ -31,4 +40,9 @@ strong {
 
 .text-right {
     text-align: right;
+}
+
+// Borders
+.border-bottom {
+    border-bottom: 1px solid $white;
 }

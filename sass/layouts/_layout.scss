@@ -1,4 +1,9 @@
+main {
+    margin: 40px 0;
+}
+
 .container {
+    @include cf();
     margin: 0 auto;
 	max-width: $container;
     width: 96%;

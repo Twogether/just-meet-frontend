@@ -37,14 +37,14 @@ gulp.task('sass', () => {
 
 gulp.task('concat', () => {
   return gulp.src([
-      './scripts/libs/es5-shim.min.js',
-      './scripts/libs/es5-sham.min.js',
-      './scripts/libs/warn-polyfill.js',
-      './scripts/libs/event-polyfill.js',
-      './scripts/libs/console-polyfill.js'
+      'scripts/libs/es5-shim.min.js',
+      'scripts/libs/es5-sham.min.js',
+      'scripts/libs/warn-polyfill.js',
+      'scripts/libs/event-polyfill.js',
+      'scripts/libs/console-polyfill.js'
     ])
     .pipe(concat('ie8.js'))
-    .pipe(gulp.dest('./public/scripts'));
+    .pipe(gulp.dest('public/scripts'));
 });
 
 gulp.task('js', () => {
@@ -52,18 +52,18 @@ gulp.task('js', () => {
     .transform("babelify", {
       presets: ["latest", "react"]
     })
-    .add('./scripts/src/app.js')
+    .add('scripts/src/app.js')
     .bundle()
     .pipe(source('app.js'))
     .pipe(buffer())
     // .pipe(uglify())
-    .pipe(gulp.dest("./public/scripts"))
+    .pipe(gulp.dest("public/scripts"))
     .pipe(livereload());
 });
 
 gulp.task('watch', () => {
-  gulp.watch('./sass/**/*.scss', ['sass']);
-  gulp.watch("./scripts/src/**/*.*", ['js']);
+  gulp.watch('sass/**/*.scss', ['sass']);
+  gulp.watch('scripts/src/**/*.*', ['js']);
   livereload.listen();
 });
 

@@ -1,20 +1,23 @@
 import React from 'react';
+import { Link } from 'react-router';
 
 export default (self) => {
   return (
-    <header class="header">
-        <div className="container">
-            <div className="left third">
-                <img className="left logo" src="img/logo.png" />
+    <header className="header">
+        <div className="container border-bottom">
+            <div className="left third text-left">
+                <Link to="/"><img className="left logo" src="img/logo.png" /></Link>
             </div>
 
-            <div class="left third text-center">
-                <strong class="uppercase">09:07</strong><br />
-                <small class="light">Friday 3rd March 2017</small>
+            <div className="left third text-center">
+                <strong className="uppercase">09:07</strong><br />
+                <small className="light">
+                    <strong>Friday 3rd March 2017</strong>
+                </small>
             </div>
 
-            <div className="right third">
-                Account O
+            <div className="right third text-right">
+                Account
             </div>
         </div>
     </header>
