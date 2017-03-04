@@ -3,6 +3,7 @@ import { Route, Redirect, IndexRoute } from 'react-router';
 import Base from './pages/base';
 import Home from './pages/home';
 import Dashboard from './pages/dashboard';
+import Login from './pages/login';
 import Actions from './pages/actions';
 import AddMeeting from './pages/addMeeting';
 import Calendar from './pages/calendar';
@@ -17,6 +18,7 @@ export default [
   <Route path="/">
     <IndexRoute component={Home}></IndexRoute>
     <Route path="/" component={Base}>
+      <Route path='login' component={Login}/>
       <Route path='dashboard' component={Dashboard}/>
       <Route path='meetings' component={MeetingsList}/>
       <Route path='meetings/add' component={AddMeeting}/>

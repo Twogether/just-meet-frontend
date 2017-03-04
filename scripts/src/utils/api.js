@@ -7,7 +7,7 @@ class Api {
   }
 
   static async getUsers() {
-    return await axios.get(`${Api.base}/users/`);
+    return await axios.get(`${Api.base}/users`);
   }
 
   static async getUser(userId) {
