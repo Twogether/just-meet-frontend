@@ -47,6 +47,7 @@ export default [
       <Route path='actions' component={Actions} onEnter={requireAuth}/>
       <Route path='rooms' component={Rooms} onEnter={requireAuth}/>
       <Route path='calendar' component={Calendar} onEnter={requireAuth}/>
+      <Route path='logout' component={Calendar} onEnter={Authentiation.logout}/>
       <Route path='404' component={NotFound}/>
     </Route>
     <Redirect from='*' to='/404'/>
