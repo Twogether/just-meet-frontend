@@ -4,10 +4,6 @@ import view from './views/dashboard';
 import Api from '../utils/api';
 import menu from '../utils/menu';
 
-Api.getUsers().then(res => {
-  console.log(res);
-});
-
 class Dashboard extends React.Component {
 
   constructor(props) {

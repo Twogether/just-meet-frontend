@@ -1,28 +1,35 @@
 import { browserHistory } from 'react-router';
 
-const Authentication = {
+class Authentication {
 
-  user: null,
+  static get user() {
+    if (!Authentication._user) {
+      let saved = localStorage.getItem('user');
+      if (saved) saved = JSON.parse(saved);
+      return saved;
+    }
+    return Authentication._user;
+  }
 
-  authorise: () => {
+  static authorise() {
     let saved = localStorage.getItem('user');
     if (saved) saved = JSON.parse(saved);
-    return saved || !!Authentication.user;
-  },
+    return saved || !!Authentication._user;
+  }
 
-  unauthorise: () => {
-    return !Authentication.user;
-  },
+  static unauthorise() {
+    return !Authentication._user;
+  }
 
-  setUser: (user) => {
+  static setUser(user) {
     localStorage.setItem('user', JSON.stringify(user));
-    Authentication.user = user;
-    return Authentication.user;
-  },
+    Authentication._user = user;
+    return Authentication._user;
+  }
 
-  logout: () => {
+  static logout() {
     localStorage.removeItem('user');
-    delete Authentication.user;
+    delete Authentication._user;
     browserHistory.push({
       pathname: '/login'
     });

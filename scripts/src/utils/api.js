@@ -15,7 +15,8 @@ class Api {
     return await axios.get(`${Api.base}/user/${Authentication.user.id}`);
   }
 
-  static async getMeeting() {
+  static async getMeetings() {
+    console.log("getting meetings from", `${Api.base}/user/${Authentication.user.id}/meetings`);
     return await axios.get(`${Api.base}/user/${Authentication.user.id}/meetings`);
   }
 
