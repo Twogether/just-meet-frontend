@@ -13,6 +13,7 @@ class AddMeeting extends React.Component {
       menu: menu,
       created: false,
       selectedAttendees: [],
+      selectedAdmins: [],
       meetingRooms: [
         {name: 'Room 1', value: '1'},
         {name: 'Room 2', value: '2'}
@@ -58,6 +59,13 @@ class AddMeeting extends React.Component {
     });
   }
 
+  removeAdmin(attendee) {
+    this.state.selectedAdmins.splice(this.state.selectedAdmins.indexOf(attendee), 1);
+    this.setState({
+      selectedAdmins: this.state.selectedAdmins
+    });
+  }
+
   updateAttendees(attendee) {
     attendee.remove = (e) => {
       e.preventDefault();
@@ -66,6 +74,17 @@ class AddMeeting extends React.Component {
     this.state.selectedAttendees.push(attendee);
     this.setState({
       selectedAttendees: this.state.selectedAttendees
+    });
+  }
+
+  updateAdmins(attendee) {
+    attendee.remove = (e) => {
+      e.preventDefault();
+      this.removeAdmin(attendee);
+    };
+    this.state.selectedAdmins.push(attendee);
+    this.setState({
+      selectedAdmins: this.state.selectedAdmins
     });
   }
 

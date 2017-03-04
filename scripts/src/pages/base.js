@@ -12,6 +12,13 @@ class Base extends React.Component {
     super(props);
     this.props = props;
     this.state = {};
+    setInterval(this.incrementHeaderTimer.bind(this), 1000);
+  }
+
+  incrementHeaderTimer() {
+    this.setState({
+      now: new Date()
+    });
   }
 
   componentDidMount() {
