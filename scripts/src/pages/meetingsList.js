@@ -1,6 +1,8 @@
 import ReactDOM from 'react-dom';
 import React from 'react';
+import view from './views/meetingList';
 import Api from '../utils/api';
+import menu from '../utils/menu';
 
 class MeetingsList extends React.Component {
 
@@ -8,6 +10,7 @@ class MeetingsList extends React.Component {
     super(props);
     this.props = props;
     this.state = {
+      menu: menu,
       meetings: []
     };
     this.getData();
@@ -20,10 +23,7 @@ class MeetingsList extends React.Component {
   }
 
   render(){
-    console.log('meetings response', this.state.meetings);
-    return (
-        <div>Meetings List</div>
-    );
+    return view(this);
   }
 };
 

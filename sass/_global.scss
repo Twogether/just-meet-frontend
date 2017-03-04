@@ -42,6 +42,16 @@ small {
     text-align: right;
 }
 
+.padding-medium {
+    padding: 20px;
+}
+
+// Backgrounds
+.white-bg {
+    background: $white;
+    color: $darkgrey;
+}
+
 // Borders
 .border-bottom {
     border-bottom: 1px solid $white;
