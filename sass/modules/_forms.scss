@@ -1,0 +1,13 @@
+form {
+    input, select, textarea {
+        display: inline-block;
+        border: 1px solid $primary;
+        font-size: 16px;
+        margin-bottom: 10px;
+        outline: none;
+        padding: 6px;
+        resize: none;
+        width: 100%;
+        @include appearance(none);
+    }
+}

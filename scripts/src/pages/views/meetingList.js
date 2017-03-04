@@ -1,6 +1,7 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import { Link } from 'react-router';
+import Moment from 'react-moment';
 
 export default (self) => {
     return (
@@ -10,12 +11,10 @@ export default (self) => {
             />
 
             <div className="left quarter">
-                <nav>
-                    <ul>
-                        {self.state.menu.map((link, index) => {
-                            return <li key={`menu1-${index}`}><Link to={link.path}>{link.text}</Link></li>
-                        })}
-                    </ul>
+                <nav className="side-nav">
+                    {self.state.menu.map((link, index) => {
+                        return <Link key={index} to={link.path}><i className={'fa fa-' + link.icon} aria-hidden="true"></i> {link.text}</Link>
+                    })}
                 </nav>
             </div>
 
@@ -23,13 +22,22 @@ export default (self) => {
                 <h2>Meetings</h2>
 
                 <table>
+                    <thead>
+                        <tr>
+                            <td>name</td>
+                            <td>date</td>
+                            <td>time</td>
+                            <td></td>
+                        </tr>
+                    </thead>
                     <tbody>
                         {self.state.meetings.map((meeting, index) => {
                             return (
-                                <tr key={`meeting2-${index}`}>
+                                <tr key={index}>
                                     <td>{meeting.name}</td>
-                                    <td>{meeting.starttime}</td>
-                                    <td>View</td>
+                                    <td><Moment format="MMMM Do YYYY">{meeting.starttime}</Moment></td>
+                                    <td><Moment format="LT">{meeting.starttime}</Moment></td>
+                                    <td><span className="btn-inline">View</span></td>
                                 </tr>
                             );
                         })}

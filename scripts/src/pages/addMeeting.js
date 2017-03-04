@@ -2,6 +2,7 @@ import ReactDOM from 'react-dom';
 import React from 'react';
 import Api from '../utils/api';
 import view from './views/addMeeting';
+import menu from '../utils/menu';
 
 class AddMeeting extends React.Component {
 
@@ -9,6 +10,7 @@ class AddMeeting extends React.Component {
     super(props);
     this.props = props;
     this.state = {
+      menu: menu,
       created: false,
       selectedAttendees: [],
       selectedAdmins: [],
