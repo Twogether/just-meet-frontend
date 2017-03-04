@@ -1,4 +1,5 @@
 import axios from 'axios';
+import Authentication from './authentication';
 
 class Api {
 
@@ -10,16 +11,17 @@ class Api {
     return await axios.get(`${Api.base}/users`);
   }
 
-  static async getUser(userId) {
-    return await axios.get(`${Api.base}/user/${userId}`);
+  static async getUser() {
+    return await axios.get(`${Api.base}/user/${Authentication.user.id}`);
   }
 
-  static async getMeeting(userId) {
-    return await axios.get(`${Api.base}/user/${userId}/meetings`);
+  static async getMeetings() {
+    console.log("getting meetings from", `${Api.base}/user/${Authentication.user.id}/meetings`);
+    return await axios.get(`${Api.base}/user/${Authentication.user.id}/meetings`);
   }
 
-  static async addMeeting(userId, data) {
-    return await axios.post(`${Api.base}/user/${userId}/meetings`, data);
+  static async addMeeting(data) {
+    return await axios.post(`${Api.base}/user/${Authentication.user.id}/meetings`, data);
   }
 
   static async editMeeting(meetingId, data) {
