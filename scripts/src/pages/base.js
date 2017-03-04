@@ -11,7 +11,9 @@ class Base extends React.Component {
   constructor(props) {
     super(props);
     this.props = props;
-    this.state = {};
+    this.state = {
+      accountDropdownOpen: false
+    };
     setInterval(this.incrementHeaderTimer.bind(this), 1000);
   }
 
@@ -29,6 +31,12 @@ class Base extends React.Component {
 
   componentWillMount() {
     emitter.emit('loading', true);
+  }
+
+  toggleAccountDropdown() {
+    this.setState({
+      accountDropdownOpen: !this.state.accountDropdownOpen
+    });
   }
 
   get links() {
