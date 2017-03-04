@@ -10,6 +10,18 @@ class Api {
     return await axios.get(`${Api.base}/meetings`);
   }
 
+  static async getActions() {
+    return await axios.get(`${Api.base}/actions`);
+  }
+
+  static async getRooms() {
+    return await axios.get(`${Api.base}/rooms`);
+  }
+
+  static async getCalendar() {
+    return await axios.get(`${Api.base}/calendar`);
+  }
+
 };
 
 export default Api;
