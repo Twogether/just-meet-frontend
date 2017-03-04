@@ -20,6 +20,7 @@ class MeetingsList extends React.Component {
     this.setState({
       meetings: (await Api.getMeetings()).data
     });
+    console.log(this.state.meetings);
   }
 
   render(){

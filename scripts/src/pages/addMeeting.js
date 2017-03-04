@@ -92,9 +92,9 @@ class AddMeeting extends React.Component {
   }
 
   async createMeeting(data) {
-    this.setState({
-      created: await Api.createMeeting(data)
-    });
+    // this.setState({
+    //   created: await Api.createMeeting(data)
+    // });
   }
 
   render(){

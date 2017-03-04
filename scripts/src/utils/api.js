@@ -1,29 +1,39 @@
 import axios from 'axios';
+import Authentication from './authentication';
 
 class Api {
 
   static get base() {
-    return 'http://localhost:3001'
+    return 'http://api.stage.justmeet.io'
   }
 
-  static async createMeeting(data) {
-    return await axios.get(`${Api.base}/meetings`);
+  static async getUsers() {
+    return await axios.get(`${Api.base}/users`);
+  }
+
+  static async getUser() {
+    return await axios.get(`${Api.base}/user/${Authentication.user.id}`);
   }
 
   static async getMeetings() {
-    return await axios.get(`${Api.base}/meetings`);
+    console.log("getting meetings from", `${Api.base}/user/${Authentication.user.id}/meetings`);
+    return await axios.get(`${Api.base}/user/${Authentication.user.id}/meetings`);
   }
 
-  static async getActions() {
-    return await axios.get(`${Api.base}/actions`);
+  static async addMeeting(data) {
+    return await axios.post(`${Api.base}/user/${Authentication.user.id}/meetings`, data);
   }
 
-  static async getRooms() {
-    return await axios.get(`${Api.base}/rooms`);
+  static async editMeeting(meetingId, data) {
+    return await axios.put(`${Api.base}/meeting/${meetingId}`, data);
   }
 
-  static async getCalendar() {
-    return await axios.get(`${Api.base}/calendar`);
+  static async addMeetingAgenda(meetingId, data) {
+    return await axios.put(`${Api.base}/meeting/${meetingId}/agenda`, data);
+  }
+
+  static async editMeetingAgenda(meetingId, agendaId, data) {
+    return await axios.put(`${Api.base}/meeting/${meetingId}/agenda/${agendaId}`, data);
   }
 
 };

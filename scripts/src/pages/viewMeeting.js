@@ -11,7 +11,6 @@ class MeetingsList extends React.Component {
     this.state = {
       id: props.params.id
     };
-    console.log("meeting id is", this.state.id);
   }
 
   // async getData() {
