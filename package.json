@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "gulpfile.js",
   "dependencies": {
+    "axios": "^0.15.3",
     "babel-cli": "^6.23.0",
     "babel-core": "^6.23.1",
     "babel-plugin-transform-decorators-legacy": "^1.3.4",
@@ -25,8 +26,11 @@
     "gulp-concat": "~2.6",
     "gulp-cssshrink": "~0.1",
     "gulp-livereload": "~3.8",
+    "gulp-plumber": "^1.0.1",
     "gulp-sass": "~3.1",
+    "gulp-sass-glob": "^1.0.6",
     "gulp-uglify": "~2.0",
+    "gulp-notify": "^2.2.0",
     "gulp-watch": "~4.3",
     "react": "^15.4.2",
     "react-addons-css-transition-group": "^15.4.2",
@@ -42,6 +46,7 @@
     "vinyl-source-stream": "~1.1"
   },
   "scripts": {
-    "start": "./node_modules/babel-cli/bin/babel-node.js -- server.js --no-warnings"
+    "start": "./node_modules/babel-cli/bin/babel-node.js -- server.js --no-warnings",
+    "json": "./node_modules/json-server/bin/index.js --watch ./json/db.json --port 3001"
   }
 }

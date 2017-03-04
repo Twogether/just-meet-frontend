@@ -1,6 +1,9 @@
 var gulp = require('gulp'),
     sass = require('gulp-sass'),
+    sassGlob = require('gulp-sass-glob'),
+    notify = require('gulp-notify'),
     uglify = require('gulp-uglify'),
+    plumber = require('gulp-plumber'),
     cssshrink = require('gulp-cssshrink'),
     concat = require('gulp-concat'),
     livereload = require('gulp-livereload');
@@ -8,11 +11,28 @@ var gulp = require('gulp'),
     source = require('vinyl-source-stream'),
     buffer = require('vinyl-buffer');
 
+var paths = {
+    styles: {
+        src: 'sass/',
+        files: 'sass/**/*.scss',
+        dest: 'public/css'
+    }
+};
+
 gulp.task('sass', () => {
-  gulp.src('./sass/**/*.scss')
-    .pipe(sass())
-    .pipe(gulp.dest('./public/css'))
-    .pipe(livereload());
+    gulp.src(paths.styles.files)
+        .pipe(plumber({
+            errorHandler: notify.onError("Sass Error: <%= error.message %>")}
+        ))
+        .pipe(sassGlob())
+        .pipe(sass({
+            outputStyle: 'compressed',
+            sourceComments: false,
+            includePaths: [paths.styles.src],
+            errLogToConsole: true
+        }))
+        .pipe(gulp.dest(paths.styles.dest))
+        .pipe(livereload());
 });
 
 gulp.task('concat', () => {
