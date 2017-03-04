@@ -47,7 +47,16 @@ export default (self) => {
             name: 'endtime',
             id: 'endtime'
           }}/>
-          <SelectSearch ref="form-field-5" options={self.state.attendees} name="attendees" placeholder="Invite Attendees" />
+          <SelectSearch ref="form-field-5" options={self.state.attendees} onChange={self.updateAttendees.bind(self)} name="attendees" placeholder="Invite Attendees" />
+          {self.state.selectedAttendees && (
+            <ul className="attendees-list">
+              {self.state.selectedAttendees.map((attendee, index) => {
+                return (
+                  <li className="attendee-option" key={`attendee-${index}`}>{attendee.name} <button onClick={attendee.remove.bind(self)}>Delete</button></li>
+                );
+              })}
+            </ul>
+          )}
           <SelectSearch ref="form-field-6" options={self.state.meetingRooms} name="room" placeholder="Meeting Room" />
           <button>Submit</button>
         </form>
