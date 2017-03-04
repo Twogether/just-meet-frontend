@@ -1,6 +1,7 @@
 import React from 'react';
 import { Route, Redirect, IndexRoute } from 'react-router';
 import Base from './pages/base';
+import Home from './pages/home';
 import Dashboard from './pages/dashboard';
 import Actions from './pages/actions';
 import AddMeeting from './pages/addMeeting';
@@ -14,8 +15,9 @@ import NotFound from './pages/404';
 
 export default [
   <Route path="/">
-    <IndexRoute component={Dashboard}></IndexRoute>
-    <Route path="/dashboard" component={Base}>
+    <IndexRoute component={Home}></IndexRoute>
+    <Route path="/" component={Base}>
+      <Route path='dashboard' component={Dashboard}/>
       <Route path='meetings' component={MeetingsList}/>
       <Route path='meetings/add' component={AddMeeting}/>
       <Route path='meetings/edit' component={EditMeeting}/>
