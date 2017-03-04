@@ -1,5 +1,6 @@
 import ReactDOM from 'react-dom';
 import React from 'react';
+import Api from '../utils/api';
 import view from './views/addMeeting';
 
 class AddMeeting extends React.Component {
@@ -8,6 +9,8 @@ class AddMeeting extends React.Component {
     super(props);
     this.props = props;
     this.state = {
+      created: false,
+      selectedAttendees: [],
       meetingRooms: [
         {name: 'Room 1', value: '1'},
         {name: 'Room 2', value: '2'}
@@ -42,9 +45,32 @@ class AddMeeting extends React.Component {
       const formData = Array.from(e.target.elements)
         .filter(el => el.name)
         .reduce((a, b) => ({...a, [b.name]: b.value}), {});
-      console.log(formData);
-      // Post formData here
+      this.createMeeting(formData);
     }
+  }
+
+  removeAttendees(attendee) {
+    this.state.selectedAttendees.splice(this.state.selectedAttendees.indexOf(attendee), 1);
+    this.setState({
+      selectedAttendees: this.state.selectedAttendees
+    });
+  }
+
+  updateAttendees(attendee) {
+    attendee.remove = (e) => {
+      e.preventDefault();
+      this.removeAttendees(attendee);
+    };
+    this.state.selectedAttendees.push(attendee);
+    this.setState({
+      selectedAttendees: this.state.selectedAttendees
+    });
+  }
+
+  async createMeeting(data) {
+    this.setState({
+      created: await Api.createMeeting(data)
+    });
   }
 
   render(){

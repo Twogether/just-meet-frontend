@@ -6,6 +6,10 @@ class Api {
     return 'http://localhost:3001'
   }
 
+  static async createMeeting(data) {
+    return await axios.get(`${Api.base}/meetings`);
+  }
+
   static async getMeetings() {
     return await axios.get(`${Api.base}/meetings`);
   }
