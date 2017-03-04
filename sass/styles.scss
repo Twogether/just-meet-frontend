@@ -6,3 +6,11 @@
 @import 'layouts/*';
 @import 'modules/*';
 @import 'components/*';
+
+// Move this somewhere @Tom
+.react-transition-wrapper {
+	position: relative;
+	.react-transition-container {
+		position: absolute;
+	}
+}

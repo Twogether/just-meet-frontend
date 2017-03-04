@@ -3,6 +3,7 @@ import React from 'react';
 import header from './views/header';
 import Loader from '../utils/loader';
 import emitter from '../utils/eventEmitter';
+import { RouteTransition } from 'react-router-transition';
 
 class Base extends React.Component {
 
@@ -59,7 +60,13 @@ class Base extends React.Component {
     return (
         <div>
           {header(this)}
-          {this.props.children}
+          <div className="react-transition-wrapper">
+            <RouteTransition pathname={this.props.location.pathname} atEnter={{ opacity: 0, display: 'none' }} atLeave={{ opacity: 0 }} atActive={{ opacity: 1 }}>
+              <div className="react-transition-container">
+                {this.props.children}
+              </div>
+            </RouteTransition>
+          </div>
           <Loader />
         </div>
     );
