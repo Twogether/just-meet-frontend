@@ -1,0 +1,30 @@
+%btn {
+    background: $lightgrey;
+    border-radius: 100px;
+    border: none;
+    color: $primary;
+    cursor: pointer;
+    display: inline-block;
+    font-family: $anton;
+    text-transform: uppercase;
+    outline: none;
+    padding: 6px 12px;
+}
+
+.btn {
+    @extend %btn;
+
+    &-large {
+        @extend %btn;
+        font-size: 18px;
+    }
+
+    &-inline {
+        @extend %btn;
+        background: transparent;
+        border: 1px solid $primary;
+        font-family: $opensans;
+        font-size: inherit;
+        text-transform: none;
+    }
+}

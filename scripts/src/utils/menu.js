@@ -1,32 +1,44 @@
 export default [
     {
+        text: 'Overview',
+        path: '/',
+        icon: 'home'
+    },
+    {
         text: 'Meetings',
         path: '/meetings',
+        icon: 'users',
         children: [
             {
                 text: 'Add Meeting',
-                path: '/meetings/add'
+                path: '/meetings/add',
+                icon: 'user-plus'
             },
             {
                 text: 'Edit Meeting',
-                path: '/meetings/edit'
+                path: '/meetings/edit',
+                icon: 'pencil'
             },
             {
                 text: 'Join Meeting',
-                path: '/meetings/join'
+                path: '/meetings/join',
+                icon: 'plus-square-o'
             }
         ]
     },
     {
         text: 'My Actions',
-        path: '/actions'
+        path: '/actions',
+        icon: 'list-ul'
     },
     {
         text: 'Rooms',
-        path: '/rooms'
+        path: '/rooms',
+        icon: 'address-book'
     },
     {
         text: 'Calendar',
-        path: '/calendar'
+        path: '/calendar',
+        icon: 'calendar'
     }
 ];

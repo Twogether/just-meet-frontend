@@ -10,12 +10,10 @@ export default (self) => {
             />
 
             <div className="left quarter">
-                <nav>
-                    <ul>
-                        {self.state.menu.map((link, index) => {
-                            return <li key={`menu1-${index}`}><Link to={link.path}>{link.text}</Link></li>
-                        })}
-                    </ul>
+                <nav className="side-nav">
+                    {self.state.menu.map((link, index) => {
+                        return <Link key={index} to={link.path}><i className={'fa fa-' + link.icon} aria-hidden="true"></i> {link.text}</Link>
+                    })}
                 </nav>
             </div>
 
@@ -26,10 +24,10 @@ export default (self) => {
                     <tbody>
                         {self.state.meetings.map((meeting, index) => {
                             return (
-                                <tr key={`meeting2-${index}`}>
+                                <tr key={index}>
                                     <td>{meeting.name}</td>
                                     <td>{meeting.starttime}</td>
-                                    <td>View</td>
+                                    <td><span className="btn-inline">View</span></td>
                                 </tr>
                             );
                         })}

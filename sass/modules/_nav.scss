@@ -40,3 +40,40 @@
         }
     }
 }
+
+// Side nav
+.side-nav {
+    a {
+        border-bottom: 1px solid $white;
+        color: $white;
+        display: block;
+        overflow: hidden;
+        padding: 10px 0;
+        position: relative;
+        text-decoration: none;
+        width: 100%;
+        @include transition(all .3s ease-in-out);
+
+        &:after {
+            content: "";
+            position: absolute;
+            display: inline-block;
+            width: 0;
+            height: 0;
+            right: -10%;
+            top: 0;
+            border-style: solid;
+            border-width: 20px 10px 20px 0;
+            border-color: transparent $white transparent transparent;
+            @include transition(all .3s ease-in-out);
+        }
+
+        &:hover {
+            background: rgba(255, 255, 255, 0.2);
+
+            &:after {
+                right: 0;
+            }
+        }
+    }
+}
