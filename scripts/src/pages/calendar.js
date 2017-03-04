@@ -1,6 +1,9 @@
 import ReactDOM from 'react-dom';
 import React from 'react';
+import view from './views/calendar';
 import Api from '../utils/api';
+import BigCalendar from 'react-big-calendar';
+import Moment from 'react-moment';
 
 class Calendar extends React.Component {
 
@@ -20,9 +23,10 @@ class Calendar extends React.Component {
   }
 
   render(){
-    return (
-        <div>Calendar</div>
-    );
+    this.calendar = React.createElement(<BigCalendar />);
+    this.calendar.momentLocalizer(Moment);
+    
+    return view(this);
   }
 };
 
