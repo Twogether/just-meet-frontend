@@ -1,3 +1,8 @@
 @charset "UTF-8";
-@import '_reset';
-@import '_settings';
+@import 'reset';
+@import 'settings';
+@import 'global';
+
+@import 'layouts/*';
+@import 'modules/*';
+@import 'components/*';
