@@ -13,7 +13,6 @@ class Dashboard extends React.Component {
 
   async getData() {
     const meetings = await Api.getMeetings();
-    console.log(meetings.data);
   }
 
   componentWillReceiveProps(newProps) {
