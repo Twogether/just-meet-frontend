@@ -1,6 +1,8 @@
 import ReactDOM from 'react-dom';
 import React from 'react';
 import header from './views/header';
+import Loader from '../utils/loader';
+import emitter from '../utils/eventEmitter';
 
 class Base extends React.Component {
 
@@ -10,8 +12,14 @@ class Base extends React.Component {
     this.state = {};
   }
 
-  componentWillReceiveProps(newProps) {
-    this.props = newProps;
+  componentDidMount() {
+    setTimeout(() => {
+      emitter.emit('loading', false);
+    }, 1000); // Slow down initial load so it looks nice
+  }
+
+  componentWillMount() {
+    emitter.emit('loading', true);
   }
 
   get links() {
@@ -52,6 +60,7 @@ class Base extends React.Component {
         <div>
           {header(this)}
           {this.props.children}
+          <Loader />
         </div>
     );
   }
