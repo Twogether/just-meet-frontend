@@ -37,7 +37,7 @@ export default (self) => {
                                     <td>{meeting.name}</td>
                                     <td><Moment format="MMMM Do YYYY">{meeting.starttime}</Moment></td>
                                     <td><Moment format="LT">{meeting.starttime}</Moment></td>
-                                    <td><span className="btn-inline">View</span></td>
+                                    <td><Link className="btn-inline" to={`/dashboard/meeting/${meeting.id}`}>View</Link></td>
                                 </tr>
                             );
                         })}

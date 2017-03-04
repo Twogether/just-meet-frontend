@@ -8,6 +8,7 @@ import Calendar from './pages/calendar';
 import EditMeeting from './pages/editMeeting';
 import JoinMeeting from './pages/joinMeeting';
 import MeetingsList from './pages/meetingsList';
+import ViewMeeting from './pages/viewMeeting';
 import Rooms from './pages/rooms';
 import NotFound from './pages/404';
 
@@ -19,6 +20,7 @@ export default [
       <Route path='meetings/add' component={AddMeeting}/>
       <Route path='meetings/edit' component={EditMeeting}/>
       <Route path='meetings/join' component={JoinMeeting}/>
+      <Route path='meeting/:id' component={ViewMeeting}/>
       <Route path='actions' component={Actions}/>
       <Route path='rooms' component={Rooms}/>
       <Route path='calendar' component={Calendar}/>

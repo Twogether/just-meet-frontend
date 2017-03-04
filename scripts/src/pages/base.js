@@ -14,7 +14,11 @@ class Base extends React.Component {
     this.state = {
       accountDropdownOpen: false
     };
-    setInterval(this.incrementHeaderTimer.bind(this), 1000);
+    this.interval = setInterval(this.incrementHeaderTimer.bind(this), 1000);
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.interval);
   }
 
   incrementHeaderTimer() {
