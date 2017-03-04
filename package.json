@@ -11,6 +11,7 @@
     "cookie-parser": "^1.4.3",
     "ejs": "^2.5.5",
     "express": "^4.14.1",
+    "json-server": "^0.9.5",
     "socket.io": "^1.7.3"
   },
   "devDependencies": {
@@ -46,7 +47,7 @@
     "vinyl-source-stream": "~1.1"
   },
   "scripts": {
-    "start": "./node_modules/babel-cli/bin/babel-node.js -- server.js --no-warnings",
+    "start": "./node_modules/.bin/babel-node -- server.js --no-warnings",
     "json": "./node_modules/json-server/bin/index.js --watch ./json/db.json --port 3001"
   }
 }
