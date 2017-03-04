@@ -6,7 +6,7 @@ import Gravatar from 'react-gravatar';
 export default (self) => {
   return (
     <header className="header">
-        <div className="container border-bottom">
+        <div className="container borde r-bottom">
             <div className="left third text-left">
                 <span className="logo">Just Meet</span>
             </div>
@@ -18,12 +18,12 @@ export default (self) => {
                 </small>
             </div>
 
-            <div className="right third text-right" onClick={self.toggleAccountDropdown.bind(self)}>
-                Account
-                <div className={self.state.accountDropdownOpen ? 'is-open' : 'is-hidden'}>
-                  dropdown
-                  <Gravatar email="simon.staton@live.co.uk" />
-                </div>
+            <div className="right third text-right account-toggle-wrapper">
+                <button className="account-toggle" onClick={self.toggleAccountDropdown.bind(self)}><Gravatar email="simon.staton@live.co.uk" />My Account</button>
+                <ul className={self.state.accountDropdownOpen ? 'account-dropdown is-open' : 'account-dropdown is-hidden'}>
+                  <li><a href="#">Edit</a></li>
+                  <li><a href="#">Logout</a></li>
+                </ul>
             </div>
         </div>
     </header>

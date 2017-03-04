@@ -1,0 +1,49 @@
+.account-toggle-wrapper {
+	position: relative;
+	.account-toggle {
+		background: none;
+		outline: none;
+		border: 1px solid #fff;
+		border-radius: 15px;
+		padding: 7px 10px;
+		vertical-align: middle;
+		color: #fff;
+		font-size: 14px;
+		line-height: 20px;
+		img {
+			width: 20px;
+			height: 20px;
+			display: inline-block;
+			margin-right: 3px;
+			vertical-align: middle;
+		}
+	}
+	ul.account-dropdown {
+		position: absolute;
+		right: 0;
+		top: 100%;
+		margin: 10px 0 0;
+		background: #fff;
+		padding: 0;
+		border-radius: 5px;
+		list-style: none;
+		width: 120px;
+		text-align: left;
+		z-index: 10;
+		a {
+			color: #000;
+			text-decoration: none;
+			display: block;
+			text-align: center;
+			width: 100%;
+			padding: 15px 0;
+			border-bottom: 1px solid #CDCDCD;
+		}
+		&.is-open {
+			display: block;
+		}
+		&.is-hidden {
+			display: none;
+		}
+	}
+}
