@@ -13,10 +13,11 @@ const app = express();
 
 const port = 80;
 
-if(process.env.PAPERTRAIL_API_TOKEN) { 
+if(process.env.HEROKU_APP) { 
     const port = 80;
 }
-else { 
+else {
+// still in dev mode 
     const port = 8081;
 }
 

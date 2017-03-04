@@ -5,6 +5,10 @@
   "env": {
     "PAPERTRAIL_API_TOKEN": {
       "required": true
+    },
+    "HEROKU_APP": {
+      "description": "The number of processes to run.",
+      "value": "true"
     }
   },
   "formation": {
