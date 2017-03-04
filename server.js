@@ -7,7 +7,16 @@ import http from 'http';
 import socketStart from './sockets/init';
 
 const app = express();
-const port = 8081;
+
+// litle hacky for now - but if the Papertrail API exists, then we 
+// must be on heroku - so set the port differently
+if(process.env.PAPERTRAIL_API_TOKEN) { 
+    const port = 80;
+}
+else { 
+    const port = 8081;
+}
+
 
 app.use(express.static(path.join(__dirname, 'public')));
 app.set('views', path.join(__dirname, 'views'));
