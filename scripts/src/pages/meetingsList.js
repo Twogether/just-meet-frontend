@@ -17,9 +17,9 @@ class MeetingsList extends React.Component {
   }
 
   async getData() {
-    this.setState({
-      meetings: (await Api.getMeetings()).data
-    });
+    // this.setState({
+      // meetings: (await Api.getMeetings()).data
+    // });
   }
 
   render(){

@@ -14,9 +14,9 @@ class Actions extends React.Component {
   }
 
   async getData() {
-    this.setState({
-      actions: (await Api.getActions()).data
-    });
+    // this.setState({
+    //   actions: (await Api.getActions()).data
+    // });
   }
 
   render(){
