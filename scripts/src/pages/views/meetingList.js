@@ -1,6 +1,7 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import { Link } from 'react-router';
+import Moment from 'react-moment';
 
 export default (self) => {
     return (
@@ -21,12 +22,21 @@ export default (self) => {
                 <h2>Meetings</h2>
 
                 <table>
+                    <thead>
+                        <tr>
+                            <td>name</td>
+                            <td>date</td>
+                            <td>time</td>
+                            <td></td>
+                        </tr>
+                    </thead>
                     <tbody>
                         {self.state.meetings.map((meeting, index) => {
                             return (
                                 <tr key={index}>
                                     <td>{meeting.name}</td>
-                                    <td>{meeting.starttime}</td>
+                                    <td><Moment format="MMMM Do YYYY">{meeting.starttime}</Moment></td>
+                                    <td><Moment format="LT">{meeting.starttime}</Moment></td>
                                     <td><span className="btn-inline">View</span></td>
                                 </tr>
                             );
