@@ -12,8 +12,8 @@ export default (self) => {
         <div className="box-nav">
             {self.state.menu.map((link, index) => {
                 return (
-                    <div key={index} className="row">
-                        <h2><Link to={link.path}>{link.text}</Link></h2>
+                    <div className="row" key={`menu1-${index}`}>
+                        <h2><Link key={`menu1-${index}`} to={link.path}>{link.text}</Link></h2>
                         <div className="menu-row">
                             {link.children && link.children.map((link, index) => {
                                 return <Link key={`child-${index}`} className="box-nav-link" to={link.path}>{link.text}</Link>
