@@ -41,7 +41,7 @@ class MeetingsList extends React.Component {
     timeFormatter(cell, row, enumObject, index) {
         if (row !== undefined) {
             return (
-                 <Moment format="LT">{row.starttime}</Moment>
+                <Moment format="LT">{row.starttime}</Moment>
             );
         }
     }

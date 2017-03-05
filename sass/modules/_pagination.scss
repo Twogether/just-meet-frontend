@@ -104,6 +104,13 @@
   color: #999999;
 }
 
+.react-bs-container-body {
+    .table {
+        border-collapse: separate;
+        border-spacing: 0 6px;
+    }
+}
+
 .react-bs-table-pagination {
     .dropdown {
         display: none;
