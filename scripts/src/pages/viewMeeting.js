@@ -1,7 +1,7 @@
 import ReactDOM from 'react-dom';
 import React from 'react';
 import view from './views/viewMeeting';
-// import Api from '../utils/api';
+import Api from '../utils/api';
 
 class MeetingsList extends React.Component {
 
@@ -9,15 +9,20 @@ class MeetingsList extends React.Component {
     super(props);
     this.props = props;
     this.state = {
-      id: props.params.id
+      id: props.params.id,
+      meeting: null
     };
   }
 
-  // async getData() {
-  //   this.setState({
-  //     meeting: (await Api.getMeeting(this.state.id)).data
-  //   });
-  // }
+  componentWillMount() {
+    this.getData();
+  }
+
+  async getData() {
+    this.setState({
+      meeting: (await Api.getMeeting(this.state.id)).data
+    });
+  }
 
   render(){
     return view(this);

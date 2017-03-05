@@ -15,6 +15,10 @@ class Api {
     return await axios.get(`${Api.base}/user/${Authentication.user.id}`);
   }
 
+  static async getMeeting(meetingId) {
+    return await axios.get(`${Api.base}/meeting/${meetingId}`);
+  }
+
   static async getMeetings() {
     return await axios.get(`${Api.base}/user/${Authentication.user.id}/meetings`);
   }
