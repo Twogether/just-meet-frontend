@@ -81,7 +81,7 @@ export default (self) => {
 
                         <div className="row text-center">
                             <h2>Enrole today and start saving time</h2>
-                            <Link to="/register" className="btn-large-blue uppercase">Register</Link>
+                            <Link to="/register" className="btn-large-green uppercase">Register</Link>
                         </div>
                     </div>
                 </section>
