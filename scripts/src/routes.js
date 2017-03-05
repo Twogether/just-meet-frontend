@@ -7,7 +7,7 @@ import Dashboard from './pages/dashboard';
 import Login from './pages/login';
 import Actions from './pages/actions';
 import AddMeeting from './pages/addMeeting';
-import Calendar from './pages/calendar';
+import Overview from './pages/overview';
 import EditMeeting from './pages/editMeeting';
 import JoinMeeting from './pages/joinMeeting';
 import MeetingsList from './pages/meetingsList';
@@ -46,8 +46,8 @@ export default [
       <Route path='meeting/:id' component={ViewMeeting} onEnter={requireAuth}/>
       <Route path='actions' component={Actions} onEnter={requireAuth}/>
       <Route path='rooms' component={Rooms} onEnter={requireAuth}/>
-      <Route path='calendar' component={Calendar} onEnter={requireAuth}/>
-      <Route path='logout' component={Calendar} onEnter={Authentiation.logout}/>
+      <Route path='overview' component={Overview} onEnter={requireAuth}/>
+      <Route path='logout' component={Dashboard} onEnter={Authentiation.logout}/>
       <Route path='404' component={NotFound}/>
     </Route>
     <Redirect from='*' to='/404'/>

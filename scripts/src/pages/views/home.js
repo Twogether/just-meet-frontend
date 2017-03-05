@@ -20,7 +20,7 @@ export default (self) => {
                         <Link to='/features'>Features</Link>
                         <Link to='/faqs'>FAQs</Link>
                         <Link to='/contact'>Get in touch</Link>
-                        <Link className="right btn-inline-dark" to='/dashboard'><i className="fa fa-sign-in" aria-hidden="true"></i> Login</Link>
+                        <Link className="right btn-inline-dark" to='/login'><i className="fa fa-sign-in" aria-hidden="true"></i> Login</Link>
                     </nav>
                 </div>
             </div>
@@ -80,12 +80,11 @@ export default (self) => {
                         </section>
 
                         <div className="row text-center">
-                            <h2>Enrole today and start saving time</h2>
-                            <Link to="/register" className="btn-large-blue uppercase">Register</Link>
+                            <h2>Already have an account?</h2>
+                            <Link to="/login" className="btn-large-blue uppercase">Login <i className="fa fa-chevron-right" aria-hidden="true"></i></Link>
                         </div>
                     </div>
                 </section>
-
             </main>
 
             <footer className="footer lightgrey-bg">
