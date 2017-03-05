@@ -10,7 +10,11 @@ class EditMeeting extends React.Component {
         super(props);
         this.props = props;
         this.state = {
+<<<<<<< HEAD
+            menu: menu,
+=======
             menu: menu || [],
+>>>>>>> 526a1645659c170175e681dcf37fcbb2e55db0f3
             id: props.params.id,
             text: '',
             created: false,
