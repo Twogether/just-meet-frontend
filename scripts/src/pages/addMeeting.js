@@ -3,6 +3,7 @@ import React from 'react';
 import Api from '../utils/api';
 import view from './views/addMeeting';
 import menu from '../utils/menu';
+import { browserHistory } from 'react-router';
 
 class AddMeeting extends React.Component {
 
@@ -39,7 +40,11 @@ class AddMeeting extends React.Component {
       }, {});
 
     // Validate all inputs
-    for(let key in inputs) if(inputs[key].validate && !inputs[key].validate()) valid = false;
+    for(let key in inputs) {
+      if(inputs[key].validate && !inputs[key].validate()) {
+        valid = false;
+      }
+    }
 
     // Handle validation
     if(!valid) {
@@ -67,9 +72,6 @@ class AddMeeting extends React.Component {
   }
 
   updateAttendees(attendee) {
-    this.refs['form-field-5'].getInstance().setState({
-      value: null // Reset value
-    });
     attendee.remove = (e) => {
       e.preventDefault();
       this.removeAttendees(attendee);
@@ -91,10 +93,25 @@ class AddMeeting extends React.Component {
     });
   }
 
-  async createMeeting(data) {
-    // this.setState({
-    //   created: await Api.createMeeting(data)
-    // });
+  changeStartDate(momentDate) {
+    this.startDate = momentDate.date();
+  }
+
+  changeEndDate(momentDate) {
+    this.endDate = momentDate.date();
+  }
+
+  createMeeting(data) {
+    const postObject = {
+      end_time: new Date(this.startDate).toISOString(),
+      start_time: new Date(this.endDate).toISOString(),
+      name: data.subject
+    };
+    Api.addMeeting(postObject).then(() => {
+      browserHistory.push({
+        pathname: '/meetings'
+      });
+    });
   }
 
   render(){
