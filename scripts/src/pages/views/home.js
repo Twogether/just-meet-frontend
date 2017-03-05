@@ -11,7 +11,7 @@ export default (self) => {
             />
 
             <div className="hero">
-                <span className="logo">Just Meet</span>
+                <img className="logo" src="img/logo-dark.png" />
             </div>
 
             <div className="nav-bar">
@@ -81,7 +81,7 @@ export default (self) => {
 
                         <div className="row text-center">
                             <h2>Already have an account?</h2>
-                            <Link to="/login" className="btn-large-blue uppercase">Login <i className="fa fa-chevron-right" aria-hidden="true"></i></Link>
+                            <Link to="/login" className="btn-large-primary uppercase">Login <i className="fa fa-chevron-right" aria-hidden="true"></i></Link>
                         </div>
                     </div>
                 </section>
