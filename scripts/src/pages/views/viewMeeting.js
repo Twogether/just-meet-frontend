@@ -1,6 +1,7 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import { Link } from 'react-router';
+import Moment from 'react-moment';
 
 export default (self) => {
     return (
@@ -18,7 +19,7 @@ export default (self) => {
                 {self.state.meeting && 
                   <div className="container">
                     <h3>{self.state.meeting.name}</h3>
-                    <p>{self.state.meeting.start_time} - {self.state.meeting.end_time}</p>
+                    <p><Moment format="LT">{self.state.meeting.start_time}</Moment> - <Moment format="LT">{self.state.meeting.end_time}</Moment></p>
                   </div>
                 }
             </div>

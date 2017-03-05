@@ -2,6 +2,7 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import { Link } from 'react-router';
 import Moment from 'react-moment';
+import {BootstrapTable, TableHeaderColumn} from 'react-bootstrap-table';
 
 export default (self) => {
     return (
@@ -26,29 +27,12 @@ export default (self) => {
 
                 <h2>Meetings</h2>
 
-                <table>
-                    <thead>
-                        <tr>
-                            <td>name</td>
-                            <td>date</td>
-                            <td>time</td>
-                            <td></td>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {self.state.meetings.map((meeting, index) => {
-                          console.log(meeting);
-                            return (
-                                <tr key={index}>
-                                    <td>{meeting.name}</td>
-                                    <td><Moment format="MMMM Do YYYY">{meeting.starttime}</Moment></td>
-                                    <td><Moment format="LT">{meeting.starttime}</Moment></td>
-                                    <td><Link className="btn-inline" to={`/meeting/${meeting.id}`}>View</Link></td>
-                                </tr>
-                            );
-                        })}
-                    </tbody>
-                </table>
+                <BootstrapTable data={self.state.meetings} search={ true } pagination={true} options={self.state.paginationOptions}>
+                    <TableHeaderColumn isKey dataField='name'>name</TableHeaderColumn>
+                    <TableHeaderColumn dataField='date' dataFormat={ self.dateFormatter }>date</TableHeaderColumn>
+                    <TableHeaderColumn dataField='time' dataFormat={ self.timeFormatter }>time</TableHeaderColumn>
+                    <TableHeaderColumn dataField='link' dataFormat={ self.linkFormatter }></TableHeaderColumn>
+                </BootstrapTable>
             </div>
         </div>
     );
