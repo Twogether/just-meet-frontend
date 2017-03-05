@@ -23,6 +23,7 @@ export default (self) => {
             </div>
 
             <div className="right three-quarters white-bg padding-medium">
+                <h2>Add Meeting</h2>
                 <form onSubmit={self.validate.bind(self)}>
                   <FormFields
                     tag="input" 
