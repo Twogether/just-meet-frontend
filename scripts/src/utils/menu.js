@@ -19,7 +19,7 @@ export default [
             //     path: '/meetings/edit',
             //     icon: 'pencil'
             // },
-            {3
+            {
                 text: 'Join Meeting',
                 path: '/meetings/join',
                 icon: 'plus-square-o'
