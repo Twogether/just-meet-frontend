@@ -41,7 +41,7 @@ export default [
       <Route path='dashboard' component={Dashboard} onEnter={requireAuth}/>
       <Route path='meetings' component={MeetingsList} onEnter={requireAuth}/>
       <Route path='meetings/add' component={AddMeeting} onEnter={requireAuth}/>
-      <Route path='meetings/edit' component={EditMeeting} onEnter={requireAuth}/>
+      <Route path='meetings/edit/:id' component={EditMeeting} onEnter={requireAuth}/>
       <Route path='meetings/join' component={JoinMeeting} onEnter={requireAuth}/>
       <Route path='meeting/:id' component={ViewMeeting} onEnter={requireAuth}/>
       <Route path='actions' component={Actions} onEnter={requireAuth}/>
