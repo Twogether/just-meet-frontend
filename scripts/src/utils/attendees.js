@@ -32,12 +32,11 @@ class Agendas extends React.Component {
   render(){
     return (
       <div className="add-attendees-list">
-        <ul>
-          {this.state.attendees.map((attendee, index) => {
-            return <li key={`attendee-${index}`}><Gravatar email={attendee} /></li>
-          })}
-        </ul>
-        <button onClick={this.toggle.bind(this)}>Add Attendee</button>
+        <h3>Add attendees</h3>
+        {this.state.attendees.map((attendee, index) => {
+            return <span key={`attendee-${index}`} className="profile-circle"><Gravatar email={attendee} /></span>
+        })}
+        <button className="circle-add" onClick={this.toggle.bind(this)}>+</button>
         {this.state.showAdd && <input type="text" placeholder="Enter users email..." onBlur={this.addAttendee.bind(this)}/>}
       </div>
     )
