@@ -29,7 +29,6 @@ a {
 
 .logo {
     color: $white;
-    font-family: $opensans;
     font-size: 32px;
     font-style: italic;
     font-weight: 600;
@@ -46,10 +45,6 @@ ul {
 
 .light {
     color: $light;
-}
-
-strong {
-    font-family: $anton;
 }
 
 small {

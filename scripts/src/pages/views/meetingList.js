@@ -19,6 +19,11 @@ export default (self) => {
             </div>
 
             <div className="right three-quarters white-bg padding-medium">
+                <div className="top-nav">
+                    <Link to="/meetings/add">Add Meeting <i className="fa fa-plus" aria-hidden="true"></i></Link>
+                    <Link to="/meetings/join">Join Meeting</Link>
+                </div>
+
                 <h2>Meetings</h2>
 
                 <table>

@@ -41,7 +41,7 @@
                 content: "";
                 position: absolute;
                 bottom: 100%;
-                left: 50%;
+                right: 20px;
                 margin-left: -2px;
                 display: inline-block;
                 width: 0;
@@ -76,7 +76,7 @@
     border-radius: 100%;
     display: inline-block;
     height: 30px;
-    margin-left: 10px;
+    margin-right: 10px;
     overflow: hidden;
     width: 30px;
     vertical-align: middle;
