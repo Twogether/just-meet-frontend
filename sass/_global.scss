@@ -27,6 +27,10 @@ a {
     text-decoration: none;
 }
 
+strong {
+    font-weight: 600;
+}
+
 .logo {
     color: $white;
     font-size: 32px;
@@ -65,12 +69,6 @@ small {
 
 .padding-medium {
     padding: 20px;
-}
-
-// Backgrounds
-.white-bg {
-    background: $white;
-    color: $darkgrey;
 }
 
 // Borders

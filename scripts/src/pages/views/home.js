@@ -1,5 +1,6 @@
 import React from 'react';
 import Helmet from 'react-helmet';
+import Moment from 'react-moment';
 import { Link } from 'react-router';
 
 export default (self) => {
@@ -25,11 +26,78 @@ export default (self) => {
             </div>
 
             <main>
-                <div className="container">
-                    <h1>Lorem ipsum heading</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <div className="container text-center">
+                    <div className="intro">
+                    <h1>Welcome to <strong><i>Just Meet</i></strong></h1>
+                        <h2>All your meetings and minutes...in one place</h2>
+                    </div>
                 </div>
+
+                <section>
+                    <div className="container">
+                        <section className="row">
+                            <div className="left third padding-left padding-right">
+                                <div className="card">
+                                    <figure>
+                                        <img src="http://www.youthemploy.eu/sites/default/files/happy-meeting.jpg" />
+                                    </figure>
+                                    <div className="card-bottom">
+                                        <h3>Save time</h3>
+                                        <p><b>Main point</b></p>
+                                        <p>Point 2</p>
+                                        <p>Point 3</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="left third padding-left padding-right">
+                                <div className="card">
+                                    <figure>
+                                        <img src="img/pod-1.jpg" />
+                                    </figure>
+                                    <div className="card-bottom">
+                                        <h3>In one place</h3>
+                                        <p><b>Main point</b></p>
+                                        <p>Point 2</p>
+                                        <p>Point 3</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="left third padding-left padding-right">
+                                <div className="card">
+                                    <figure>
+                                        <img src="http://www.transformingperformance.co.uk/wp-content/uploads/2015/12/boring-meeting1.jpg" />
+                                    </figure>
+                                    <div className="card-bottom">
+                                        <h3>Share & Update</h3>
+                                        <p><b>Main point</b></p>
+                                        <p>Point 2</p>
+                                        <p>Point 3</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <div className="row text-center">
+                            <h2>Enrole today and start saving time</h2>
+                            <Link to="/register" className="btn-large-blue uppercase">Register</Link>
+                        </div>
+                    </div>
+                </section>
+
             </main>
+
+            <footer className="footer lightgrey-bg">
+                <div className="container">
+                    <div className="left copyright">&copy; <Moment format="YYYY">{self.state.now}</Moment> Just Meet</div>
+                    <div className="right social-links">
+                        <a href="https://facebook.com/" target="_blank"><i className="fa fa-facebook-square" aria-hidden="true"></i></a>
+                        <a href="https://twitter.com/" target="_blank"><i className="fa fa-twitter-square" aria-hidden="true"></i></a>
+                        <a href="https://google.com/plus" target="_blank"><i className="fa fa-google-plus-square" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+            </footer>
         </div>
     );
 };

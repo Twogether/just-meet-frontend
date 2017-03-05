@@ -5,3 +5,14 @@ section {
         width: 100%;
     }
 }
+
+// Backgrounds
+.white-bg {
+    background: $white;
+    color: $darkgrey;
+}
+
+.lightgrey-bg {
+    background: $lightgrey;
+    color: $darkgrey;
+}

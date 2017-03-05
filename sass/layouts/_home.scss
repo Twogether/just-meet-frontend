@@ -30,3 +30,72 @@
         }
     }
 }
+
+// Intro
+.intro {
+    display: inline-block;
+    margin-bottom: 30px;
+    width: 100%;
+
+    h1, h2, h3 {
+        font-weight: 200;
+        margin-bottom: 10px;
+    }
+
+    h1 {
+        color: $primary;
+    }
+
+    h2 {
+        color: $darkgrey;
+        font-size: 20px;
+    }
+}
+
+// Pods
+.card {
+    position: relative;
+    background-color: white;
+    text-align: center;
+    border-bottom: 2px solid $primary;
+    box-shadow: 0px 2px 3px rgba(#000, .2);
+    @include transition(all .3s ease);
+    
+    figure {
+        border: 1px solid $lightgrey;
+        height: 230px;
+        margin: 0;
+        overflow: hidden;
+        padding: 0;
+        position: relative;
+        width: 100%;
+        
+        img {
+            display: block;
+            left: 50%;
+            height: auto;
+            min-height: 100%;
+            min-width: 100%;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            @include transform(translate3d(-50%, -50%, 0));
+        }
+    }
+
+    .card-bottom {
+        padding: 20px;
+
+        p {
+            margin: 0 0 10px;
+        }
+    }
+
+    h3 {
+        font-size: 28px;
+        font-weight: 200;
+        color: $primary;
+        line-height: 1;
+        margin-bottom: 15px;
+    }
+}

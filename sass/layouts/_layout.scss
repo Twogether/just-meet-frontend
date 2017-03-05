@@ -38,6 +38,9 @@ main {
 	float: right;
 }
 
+.full-width {
+    width: 100%;
+}
 
 .three-quarters {
     width: 75%;
@@ -53,4 +56,12 @@ main {
 
 .half {
 	width: 50%;
+}
+
+.padding-left {
+    padding-left: 15px;
+}
+
+.padding-right {
+    padding-right: 15px;
 }
