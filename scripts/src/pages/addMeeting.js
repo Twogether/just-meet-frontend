@@ -20,8 +20,10 @@ class AddMeeting extends React.Component {
         {name: 'Room 2', value: '2'}
       ],
       attendees: [
-        {name: 'Simon', value: '1'},
-        {name: 'Tom', value: '2'}
+        {name: 'Simon Staton', value: '1'},
+        {name: 'Emily Shepherd', value: '2'},
+        {name: 'Jon Busby', value: '3'},
+        {name: 'Tom Clarke', value: '4'}
       ]
     };
   }
