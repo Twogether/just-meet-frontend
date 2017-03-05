@@ -3,6 +3,7 @@ import Helmet from 'react-helmet';
 import FormFields from 'react-form-fields';
 import Datetime from 'react-datetime';
 import SelectSearch from 'react-select-search';
+import Agendas from '../../utils/agendas';
 import { Link } from 'react-router';
 
 export default (self) => {
@@ -79,6 +80,7 @@ export default (self) => {
                     </ul>
                   )}
                   <SelectSearch ref="form-field-6" options={self.state.meetingRooms} name="room" placeholder="Meeting Room" />
+                  <Agendas />
                   <button type="submit" className="btn btn-large-primary uppercase right">Submit</button>
                 </form>
             </div>
