@@ -109,7 +109,7 @@ class AddMeeting extends React.Component {
     };
     Api.addMeeting(postObject).then((res) => {
       browserHistory.push({
-        pathname: '/meetings'
+        pathname: `/meeting/${res.data.id}`
       });
     });
   }
