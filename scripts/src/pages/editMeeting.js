@@ -14,6 +14,16 @@ class EditMeeting extends React.Component {
         };
     }
 
+    componentWillMount() {
+      this.getData();
+    }
+
+    async getData() {
+      this.setState({
+        meeting: (await Api.getMeeting(this.state.id)).data
+      });
+    }
+
     handleChange(value) {
         this.setState({ text: value });
     }
