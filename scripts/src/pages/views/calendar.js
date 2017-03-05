@@ -19,7 +19,7 @@ export default (self) => {
                 <div className="container">
                     <h2>Calendar</h2>
                     
-                    <BigCalendar />
+                    <BigCalendar events={self.state.events} />
                 </div>
             </div>
         </div>
