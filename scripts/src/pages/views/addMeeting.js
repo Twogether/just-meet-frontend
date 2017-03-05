@@ -82,7 +82,7 @@ export default (self) => {
                   )}
                   <SelectSearch ref="form-field-6" options={self.state.meetingRooms} name="room" placeholder="Meeting Room" />
 
-                  <section className="padding-medium">
+                  <section className="padding-top-bottom">
                     <h3>Actions</h3>
                     <ListClass />
                   </section>

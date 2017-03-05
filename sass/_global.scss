@@ -77,6 +77,14 @@ small {
     padding: 20px;
 }
 
+.padding-top-bottom {
+    padding: 20px 0;
+}
+
+.padding-sides {
+    padding: 0 20px;
+}
+
 // Borders
 .border-bottom {
     border-bottom: 1px solid $white;
