@@ -4,6 +4,7 @@ import FormFields from 'react-form-fields';
 import Datetime from 'react-datetime';
 import SelectSearch from 'react-select-search';
 import Agendas from '../../utils/agendas';
+import Attendees from '../../utils/attendees';
 import ListClass from 'react-items-list';
 import { Link } from 'react-router';
 
@@ -86,6 +87,7 @@ export default (self) => {
                     <h3>Actions</h3>
                     <ListClass />
                   </section>
+                  <Attendees />
                   <button type="submit" className="btn btn-large-primary uppercase right">Create meeting <i className="fa fa-chevron-right" aria-hidden="true"></i></button>
                 </form>
             </div>
