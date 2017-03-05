@@ -14,12 +14,12 @@ export default [
                 path: '/meetings/add',
                 icon: 'user-plus'
             },
-            {
-                text: 'Edit Meeting',
-                path: '/meetings/edit',
-                icon: 'pencil'
-            },
-            {
+            // {
+            //     text: 'Edit Meeting',
+            //     path: '/meetings/edit',
+            //     icon: 'pencil'
+            // },
+            {3
                 text: 'Join Meeting',
                 path: '/meetings/join',
                 icon: 'plus-square-o'

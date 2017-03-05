@@ -13,26 +13,40 @@ export default (self) => {
 
             <div className="left quarter">
                 <nav className="side-nav">
-                    {self.state.menu.map((link, index) => {
-                        return <Link key={index} to={link.path}><i className={'fa fa-' + link.icon} aria-hidden="true"></i> {link.text}</Link>
-                    })}
+                    <ul>
+                        {self.state.menu.map((link, index) => {
+                            return (
+                                <li key={index}>
+                                    <Link to={link.path}><i className={'fa fa-' + link.icon} aria-hidden="true"></i> {link.text}</Link>
+                                    <ul className="sub-menu">
+                                        {link.children && link.children.map((link, index) => {
+                                            return (
+                                                <li key={`child-${index}`}><Link to={link.path}><i className={'fa fa-' + link.icon} aria-hidden="true"></i> {link.text}</Link></li>
+                                            );
+                                        })}
+                                    </ul>
+                                </li>
+                            );
+                        })}
+                    </ul>
                 </nav>
             </div>
 
-            <div className="right three-quarters white-bg padding-medium">
+            <div className="right three-quarters white-bg">
                 <div className="top-nav">
-                    <Link to="/meetings/add">Add Meeting <i className="fa fa-plus" aria-hidden="true"></i></Link>
-                    <Link to="/meetings/join">Join Meeting</Link>
+                    <Link className="right" to="/meetings/add">Add Meeting <i className="fa fa-plus" aria-hidden="true"></i></Link>
                 </div>
 
-                <h2>Meetings</h2>
+                <div className="padding-medium">
+                    <h2>Meetings</h2>
 
-                <BootstrapTable data={self.state.meetings} search={ true } pagination={true} options={self.state.paginationOptions}>
-                    <TableHeaderColumn isKey dataField='name'>name</TableHeaderColumn>
-                    <TableHeaderColumn dataField='date' dataFormat={ self.dateFormatter }>date</TableHeaderColumn>
-                    <TableHeaderColumn dataField='time' dataFormat={ self.timeFormatter }>time</TableHeaderColumn>
-                    <TableHeaderColumn dataField='link' dataFormat={ self.linkFormatter }></TableHeaderColumn>
-                </BootstrapTable>
+                    <BootstrapTable data={self.state.meetings} search={ true } pagination={true} options={self.state.paginationOptions}>
+                        <TableHeaderColumn isKey dataField='name'>name</TableHeaderColumn>
+                        <TableHeaderColumn dataField='date' dataFormat={ self.dateFormatter }>date</TableHeaderColumn>
+                        <TableHeaderColumn dataField='time' dataFormat={ self.timeFormatter }>time</TableHeaderColumn>
+                        <TableHeaderColumn dataField='link' dataFormat={ self.linkFormatter }></TableHeaderColumn>
+                    </BootstrapTable>
+                </div>
             </div>
         </div>
     );
