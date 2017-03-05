@@ -27,9 +27,7 @@ export default (self) => {
                   <FormFields
                     tag="input" 
                     validation="alphanumeric" 
-                    errorMsg="Meeting Subject is required" 
-                    ref="form-field-1"  
-                    required={true} 
+                    ref="form-field-1"
                     attributes={{
                       type: 'text',
                       placeholder: 'Subject',
@@ -40,9 +38,7 @@ export default (self) => {
                   <FormFields
                     tag="textarea" 
                     validation="alphanumeric" 
-                    errorMsg="Agenda is required" 
-                    ref="form-field-2"  
-                    required={true} 
+                    ref="form-field-2" 
                     attributes={{
                       placeholder: 'Agenda',
                       name: 'description',
@@ -50,12 +46,12 @@ export default (self) => {
                       rows: 14
                     }}
                   />
-                  <Datetime ref="form-field-3" inputProps={{
+                  <Datetime ref="form-field-3" onChange={self.changeStartDate.bind(self)} inputProps={{
                     placeholder: 'Start date/time',
                     name: 'starttime',
                     id: 'starttime'
                   }}/>
-                  <Datetime ref="form-field-4" inputProps={{
+                  <Datetime ref="form-field-4" onChange={self.changeEndDate.bind(self)} inputProps={{
                     placeholder: 'End date/time',
                     name: 'endtime',
                     id: 'endtime'
