@@ -79,7 +79,7 @@ export default (self) => {
                     </ul>
                   )}
                   <SelectSearch ref="form-field-6" options={self.state.meetingRooms} name="room" placeholder="Meeting Room" />
-                  <button type="submit" className="btn btn-large-primary uppercase right">Submit</button>
+                  <button type="submit" className="btn btn-large-primary uppercase right">Create meeting <i className="fa fa-chevron-right" aria-hidden="true"></i></button>
                 </form>
             </div>
         </div>

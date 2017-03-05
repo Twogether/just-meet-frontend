@@ -3,3 +3,23 @@
 .rbc-date-cell {
     min-height: 80px;
 }
+
+.rbc-event, .rbc-current-time-indicator {
+    background-color: $primary;
+}
+
+.rbc-current-time-indicator::before {
+    background-color: $primary;
+}
+
+.rbc-show-more {
+    color: $primary;
+}
+
+.rbc-current, .rbc-day-slot .rbc-time-slot {
+    background: lighten($light, 20%);
+}
+
+.rbc-today {
+    background: lighten($light, 14%);
+}
