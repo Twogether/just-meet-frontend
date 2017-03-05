@@ -12,8 +12,10 @@ export default (self) => {
 
             <div className="left quarter">
                 <nav className="side-nav">
-                    <a href="/login">Login</a>
-                    <a href="/login">Register</a>
+                    <ul>
+                        <li><a href="/login">Login</a></li>
+                        <li><a href="/login">Register</a></li>
+                    </ul>
                 </nav>
             </div>
 
@@ -47,7 +49,7 @@ export default (self) => {
                           value: 'test1234'
                         }}
                     />
-                    <Link className="btn btn-large-blue right" to="/dashboard">Login <i className="fa fa-chevron-right" aria-hidden="true"></i></Link>
+                    <Link className="btn btn-large-primary uppercase right" to="/dashboard">Login <i className="fa fa-chevron-right" aria-hidden="true"></i></Link>
                 </form>
             </div>
         </div>
