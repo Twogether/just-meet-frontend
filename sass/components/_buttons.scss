@@ -5,7 +5,6 @@
     color: $primary;
     cursor: pointer;
     display: inline-block;
-    font-family: $anton;
     text-transform: uppercase;
     outline: none;
     padding: 6px 12px;
@@ -49,6 +48,22 @@
         &:hover {
             background: $light;
             color: $primary !important;
+        }
+    }
+
+    &-large-blue {
+        @extend %btn;
+        background: $primary;
+        border-radius: 0;
+        color: $white;
+        display: inline-block;
+        font-size: 24px;
+        font-weight: 600;
+        padding: 10px 22px;
+        @include transition(all .3s ease-in-out);
+        
+        &:hover {
+            background: darken($primary, 8%);
         }
     }
 }

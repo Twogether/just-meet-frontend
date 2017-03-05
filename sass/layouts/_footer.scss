@@ -1,3 +1,21 @@
 .footer {
-	
+    font-size: 14px;
+    padding: 14px;
+    
+    .copyright {
+        margin-top: 6px;
+    }
+
+    .social-links {
+        .fa {
+            color: $primary;
+            font-size: 26px;
+            margin-left: 6px;
+            @include transition(all .3s ease-in-out);
+
+            &:hover {
+                color: $darkgrey;
+            }
+        }
+    }    
 }
