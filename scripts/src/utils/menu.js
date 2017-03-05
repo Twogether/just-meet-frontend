@@ -2,7 +2,7 @@ export default [
     {
         text: 'Dashboard',
         path: '/dashboard',
-        icon: 'home'
+        icon: 'calendar'
     },
     {
         text: 'Meetings',
@@ -30,15 +30,5 @@ export default [
         text: 'My Actions',
         path: '/actions',
         icon: 'list-ul'
-    },
-    {
-        text: 'Rooms',
-        path: '/rooms',
-        icon: 'address-book'
-    },
-    {
-        text: 'Calendar',
-        path: '/calendar',
-        icon: 'calendar'
     }
 ];
