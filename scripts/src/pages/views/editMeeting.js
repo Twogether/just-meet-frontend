@@ -35,13 +35,12 @@ export default (self) => {
                 </nav>
             </div>
 
-            <div className="right three-quarters white-bg padding-medium">
+            <div className="right three-quarters white-bg">
                 <div className="top-nav">
                     <Link to={`/meeting/${self.props.params.id}`}><i className="fa fa-chevron-left" aria-hidden="true"></i> Back to meeting</Link>
-                    <Link className="right" to={`/meetings/edit/${self.props.params.id}`}><i className="fa fa-pencil" aria-hidden="true"></i> Save changes</Link>
                 </div>
 
-                <div className="container">
+                <div className="padding-medium">
                     <h2>Edit Meeting</h2>
                     <form onSubmit={self.validate.bind(self)}>
                       <FormFields
@@ -96,9 +95,10 @@ export default (self) => {
                         </ul>
                       )}
                       <SelectSearch ref="form-field-6" options={self.state.meetingRooms} name="room" placeholder="Meeting Room" />
-                      <button type="submit" className="btn uppercase">Submit</button>
+                      <div className="text-right">
+                        <button type="submit" className="btn btn-large-primary uppercase">Save changes <i className="fa fa-chevron-right" aria-hidden="true"></i></button>
+                      </div>
                     </form>
-
 
                 </div>
             </div>
