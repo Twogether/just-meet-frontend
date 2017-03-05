@@ -11,7 +11,7 @@ export default (self) => {
             />
 
             <div className="hero">
-                <span className="logo">Just Meet</span>
+                <img className="logo" src="img/logo-dark.png" />
             </div>
 
             <div className="nav-bar">
@@ -81,7 +81,7 @@ export default (self) => {
 
                         <div className="row text-center">
                             <h2>Enrole today and start saving time</h2>
-                            <Link to="/register" className="btn-large-blue uppercase">Register</Link>
+                            <Link to="/register" className="btn-large-green uppercase">Register</Link>
                         </div>
                     </div>
                 </section>
