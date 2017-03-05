@@ -2,7 +2,7 @@ export default [
     {
         text: 'Dashboard',
         path: '/dashboard',
-        icon: 'home'
+        icon: 'calendar'
     },
     {
         text: 'Meetings',
@@ -14,11 +14,11 @@ export default [
                 path: '/meetings/add',
                 icon: 'user-plus'
             },
-            {
-                text: 'Edit Meeting',
-                path: '/meetings/edit',
-                icon: 'pencil'
-            },
+            // {
+            //     text: 'Edit Meeting',
+            //     path: '/meetings/edit',
+            //     icon: 'pencil'
+            // },
             {
                 text: 'Join Meeting',
                 path: '/meetings/join',
@@ -30,15 +30,5 @@ export default [
         text: 'My Actions',
         path: '/actions',
         icon: 'list-ul'
-    },
-    {
-        text: 'Rooms',
-        path: '/rooms',
-        icon: 'address-book'
-    },
-    {
-        text: 'Calendar',
-        path: '/calendar',
-        icon: 'calendar'
     }
 ];

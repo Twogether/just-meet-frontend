@@ -1,0 +1,9 @@
+#actions-list {
+	padding: 20px 0 30px !important;
+	> div > div > div {
+		width: calc(100% - 50px) !important;
+		> div hr:last-of-type {
+			border-color: $primary !important;
+		}
+	}
+}

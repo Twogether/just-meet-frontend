@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    outline: none;
 }
 
 body {
@@ -36,6 +37,11 @@ strong {
     font-size: 32px;
     font-style: italic;
     font-weight: 600;
+    img {
+        height: 40px;
+        display: block;
+        margin-top: 5px;
+    }
 }
 
 ul {
@@ -78,4 +84,8 @@ small {
 
 .is-hidden {
     display: none;
+}
+
+.loader {
+    display: none !important;
 }

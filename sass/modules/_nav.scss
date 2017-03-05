@@ -7,7 +7,7 @@
 .top-nav {
     @extend .menu-row;
     border-bottom: 1px solid $primary;
-    margin-bottom: 30px;
+    margin-bottom: 0;
 
     a {
         background: transparent;
@@ -29,7 +29,7 @@
         color: $white;
         display: block;
         overflow: hidden;
-        padding: 10px 0;
+        padding: 14px 0;
         position: relative;
         text-decoration: none;
         width: 100%;
@@ -58,6 +58,16 @@
         &:hover {
             background: rgba(255, 255, 255, 0.2);
             padding-left: 10px;
+        }
+    }
+
+    .sub-menu {
+        li {
+            padding-left: 20px;
+
+            a {
+                border-bottom: none;
+            }
         }
     }
 }

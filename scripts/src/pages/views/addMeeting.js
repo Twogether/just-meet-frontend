@@ -3,6 +3,9 @@ import Helmet from 'react-helmet';
 import FormFields from 'react-form-fields';
 import Datetime from 'react-datetime';
 import SelectSearch from 'react-select-search';
+import Agendas from '../../utils/agendas';
+import Attendees from '../../utils/attendees';
+import ListClass from 'react-items-list';
 import { Link } from 'react-router';
 
 export default (self) => {
@@ -16,7 +19,18 @@ export default (self) => {
                 <nav className="side-nav">
                     <ul>
                         {self.state.menu.map((link, index) => {
-                            return <li key={index}><Link to={link.path}>{link.text}</Link></li>
+                            return (
+                                <li key={index}>
+                                    <Link to={link.path}><i className={'fa fa-' + link.icon} aria-hidden="true"></i> {link.text}</Link>
+                                    <ul className="sub-menu">
+                                        {link.children && link.children.map((link, index) => {
+                                            return (
+                                                <li key={`child-${index}`}><Link to={link.path}><i className={'fa fa-' + link.icon} aria-hidden="true"></i> {link.text}</Link></li>
+                                            );
+                                        })}
+                                    </ul>
+                                </li>
+                            );
                         })}
                     </ul>
                 </nav>
@@ -68,7 +82,13 @@ export default (self) => {
                     </ul>
                   )}
                   <SelectSearch ref="form-field-6" options={self.state.meetingRooms} name="room" placeholder="Meeting Room" />
-                  <button type="submit" className="btn uppercase">Submit</button>
+
+                  <section className="padding-medium" id="actions-list">
+                    <h3>Actions</h3>
+                    <ListClass />
+                  </section>
+                  <Attendees />
+                  <button type="submit" className="btn btn-large-primary uppercase right">Create meeting <i className="fa fa-chevron-right" aria-hidden="true"></i></button>
                 </form>
             </div>
         </div>
