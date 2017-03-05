@@ -37,6 +37,7 @@ export default (self) => {
                     </thead>
                     <tbody>
                         {self.state.meetings.map((meeting, index) => {
+                          console.log(meeting);
                             return (
                                 <tr key={index}>
                                     <td>{meeting.name}</td>

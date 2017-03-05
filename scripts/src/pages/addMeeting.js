@@ -94,11 +94,11 @@ class AddMeeting extends React.Component {
   }
 
   changeStartDate(momentDate) {
-    this.startDate = momentDate.date();
+    this.startDate = momentDate._d;
   }
 
   changeEndDate(momentDate) {
-    this.endDate = momentDate.date();
+    this.endDate = momentDate._d;
   }
 
   createMeeting(data) {
@@ -107,7 +107,7 @@ class AddMeeting extends React.Component {
       start_time: new Date(this.endDate).toISOString(),
       name: data.subject
     };
-    Api.addMeeting(postObject).then(() => {
+    Api.addMeeting(postObject).then((res) => {
       browserHistory.push({
         pathname: '/meetings'
       });
