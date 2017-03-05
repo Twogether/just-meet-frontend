@@ -11,7 +11,7 @@ export default (self) => {
             />
 
             <div className="hero">
-                <span className="logo">Just Meet</span>
+                <img className="logo" src="img/logo-dark.png" />
             </div>
 
             <div className="nav-bar">

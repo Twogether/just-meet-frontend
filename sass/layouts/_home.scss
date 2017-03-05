@@ -5,10 +5,16 @@
     overflow: hidden;
     text-align: center;
     padding: 20% 0;
+    position: relative;
 
     .logo {
-        font-size: 66px;
-        text-shadow: 0 0 10px $black;
+        display: block;
+        margin: 0 auto;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 450px;
     }
 }
 

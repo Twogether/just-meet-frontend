@@ -9,7 +9,7 @@ export default (self) => {
     <header className="header">
         <div className="container border-bottom">
             <div className="left third text-left">
-                <Link to="/"><span className="logo">Just Meet</span></Link>
+                <Link to="/"><span className="logo"><img src="img/logo.png" /></span></Link>
             </div>
 
             <div className="left third text-center">
