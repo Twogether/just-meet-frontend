@@ -42,10 +42,10 @@ export default (self) => {
                                         <img src="http://www.youthemploy.eu/sites/default/files/happy-meeting.jpg" />
                                     </figure>
                                     <div className="card-bottom">
-                                        <h3>Save time</h3>
-                                        <p><b>Main point</b></p>
-                                        <p>Point 2</p>
-                                        <p>Point 3</p>
+                                        <h3>Productivity</h3>
+                                        <p><b>Remind Attendees</b></p>
+                                        <p>Attend effortlessly</p>
+                                        <p>Run on time</p>
                                     </div>
                                 </div>
                             </div>
@@ -56,10 +56,10 @@ export default (self) => {
                                         <img src="img/pod-1.jpg" />
                                     </figure>
                                     <div className="card-bottom">
-                                        <h3>In one place</h3>
-                                        <p><b>Main point</b></p>
-                                        <p>Point 2</p>
-                                        <p>Point 3</p>
+                                        <h3>Increase Accountability</h3>
+                                        <p><b>Send out actions</b></p>
+                                        <p>Chase todos</p>
+                                        <p>Badger people automatically</p>
                                     </div>
                                 </div>
                             </div>
@@ -70,10 +70,10 @@ export default (self) => {
                                         <img src="http://www.transformingperformance.co.uk/wp-content/uploads/2015/12/boring-meeting1.jpg" />
                                     </figure>
                                     <div className="card-bottom">
-                                        <h3>Share & Update</h3>
-                                        <p><b>Main point</b></p>
-                                        <p>Point 2</p>
-                                        <p>Point 3</p>
+                                        <h3>Make Meetings Powerful</h3>
+                                        <p><b>Study key analytics</b></p>
+                                        <p>See time spent</p>
+                                        <p>Look at pretty graphs!</p>
                                     </div>
                                 </div>
                             </div>
