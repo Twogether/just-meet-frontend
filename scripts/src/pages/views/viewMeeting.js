@@ -2,6 +2,7 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import { Link } from 'react-router';
 import Moment from 'react-moment';
+import Gravatar from 'react-gravatar';
 
 export default (self) => {
     return (
@@ -41,6 +42,27 @@ export default (self) => {
                   <div className="container">
                     <h3>{self.state.meeting.name}</h3>
                     <p><Moment format="LT">{self.state.meeting.start_time}</Moment> - <Moment format="LT">{self.state.meeting.end_time}</Moment></p>
+                    <div className="attendees-wrapper">
+                      <h3>Attendees</h3>
+                      <div className="attendees-list">
+                        <div className="attendee-box quarter left">
+                          <Gravatar email="jon.busby@wearetwogether.com" />
+                          <p>Jon Busby</p>
+                        </div>
+                        <div className="attendee-box quarter left">
+                          <Gravatar email="simon.staton@wearetwogether.com" />
+                          <p>Simon Staton</p>
+                        </div>
+                        <div className="attendee-box quarter left">
+                          <Gravatar email="emily.shepherd@wearetwogether.com" />
+                          <p>Emily Shepherd</p>
+                        </div>
+                        <div className="attendee-box quarter left">
+                          <Gravatar email="tom.clarke@wearetwogether.com" />
+                          <p>Tom Clarke</p>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 }
             </div>
