@@ -72,22 +72,15 @@ export default (self) => {
                     id: 'endtime'
                   }}/>
                   <SelectSearch ref="form-field-5" options={self.state.attendees} onChange={self.updateAttendees.bind(self)} name="attendees" placeholder="Invite Attendees" />
-                  {self.state.selectedAttendees && (
-                    <ul className="attendees-list">
-                      {self.state.selectedAttendees.map((attendee, index) => {
-                        return (
-                          <li className="attendee-option" key={`attendee-${index}`}>{attendee.name} <button onClick={attendee.remove.bind(self)}>Delete</button></li>
-                        );
-                      })}
-                    </ul>
-                  )}
+                  
+                  <Attendees />
+                  
                   <SelectSearch ref="form-field-6" options={self.state.meetingRooms} name="room" placeholder="Meeting Room" />
 
                   <section className="padding-top-bottom">
                     <h3>Actions</h3>
                     <ListClass />
                   </section>
-                  <Attendees />
                   <button type="submit" className="btn btn-large-primary uppercase right">Create meeting <i className="fa fa-chevron-right" aria-hidden="true"></i></button>
                 </form>
             </div>

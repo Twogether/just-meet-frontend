@@ -29,3 +29,35 @@ form {
         line-height: 1;
     }
 }
+
+.add-attendees-list {
+    display: inline-block;
+    margin-bottom: 20px;
+    width: 100%;
+
+    h3 {
+        margin: 10px 0 10px;
+    }
+
+    input {
+        width: 50%;
+        margin-bottom: 0;
+        margin-left: 10px;   
+    }
+}
+
+.circle-add {
+    background: $primary;
+    border: none;
+    border-radius: 100%;
+    color: $white;
+    cursor: pointer;
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    @include transition(all .3s ease-in-out);
+
+    &:hover {
+        background: darken($primary, 10%);
+    }
+}
