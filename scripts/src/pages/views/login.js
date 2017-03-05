@@ -49,7 +49,7 @@ export default (self) => {
                           value: 'test1234'
                         }}
                     />
-                    <Link className="btn btn-large-primary uppercase right" to="/dashboard">Login <i className="fa fa-chevron-right" aria-hidden="true"></i></Link>
+                    <button type="submit" className="btn btn-large-primary uppercase right">Login <i className="fa fa-chevron-right" aria-hidden="true"></i></button>
                 </form>
             </div>
         </div>
