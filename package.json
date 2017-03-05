@@ -46,6 +46,7 @@
     "react-froala-wysiwyg": "^2.5.0",
     "react-gravatar": "^2.6.1",
     "react-helmet": "^4.0.0",
+    "react-items-list": "0.0.9",
     "react-moment": "^0.2.2",
     "react-paginate": "^4.1.1",
     "react-pagination-table": "^1.0.3",
