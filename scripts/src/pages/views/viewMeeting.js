@@ -14,10 +14,12 @@ export default (self) => {
                     <Link to="/meetings"><i className="fa fa-chevron-left" aria-hidden="true"></i> Back to meetings</Link>
                 </div>
 
-                <div className="container">
-                    <h3>This is a new meeting</h3>
-                    <p>Description goes here...</p>
-                </div>
+                {self.state.meeting && 
+                  <div className="container">
+                    <h3>{self.state.meeting.name}</h3>
+                    <p>{self.state.meeting.start_time} - {self.state.meeting.end_time}</p>
+                  </div>
+                }
             </div>
         </div>
     );
